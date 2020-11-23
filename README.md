@@ -3,7 +3,7 @@
 <center>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=for-the-badge)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=for-the-badge)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </center>
@@ -80,6 +80,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/raydwaipayan"><img src="https://avatars1.githubusercontent.com/u/35661311?v=4" width="100px;" alt=""/><br /><sub><b>Dwaipayan Ray</b></sub></a><br /><a href="#maintenance-raydwaipayan" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/souvikmahato-sm"><img src="https://avatars3.githubusercontent.com/u/58760297?v=4" width="100px;" alt=""/><br /><sub><b>souvikmahato-sm</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=souvikmahato-sm" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/prerna2712"><img src="https://avatars1.githubusercontent.com/u/56025548?v=4" width="100px;" alt=""/><br /><sub><b>Prerna Gupta</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=prerna2712" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/iammanish17"><img src="https://avatars0.githubusercontent.com/u/35730135?v=4" width="100px;" alt=""/><br /><sub><b>Manish Kundu</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=iammanish17" title="Documentation">📖</a></td>
   </tr>
 </table>
 
