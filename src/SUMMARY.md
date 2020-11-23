@@ -1,6 +1,12 @@
 # Summary
 
 - [Introduction](./introduction.md)
+- [Algebra](./Algebra/Algebra.md)
+  - [Sieve of Eratosthenes](./Algebra/SieveOfEratosthenes/SieveOfEratosthenes.md)
+  - [Fibonacci Sequence](./Algebra/Fibonacci/Fibonacci.md)
+  - [Linear Diophantine Equations](./Algebra/LinearDiophantine/LinearDiophantine.md)
+  - [Euler's Totient Function](./Algebra/EulerTotient/EulerTotient.md)
+  - [Modular Multiplicative Inverse](./Algebra/ModularInverse/ModularInverse.md)
 - [Searching Algorithms](./Searching_Algos/Linear_search/Explanation.md)
   - [Linear Search](./Searching_Algos/Linear_search/Explanation.md)
   - [Binary Search](./Searching_Algos/Binary_search/Explanation.md)
