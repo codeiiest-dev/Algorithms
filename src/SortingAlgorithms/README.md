@@ -8,3 +8,6 @@ A Sorting Algorithm is used to rearrange a given array or list elements accordin
 
 - [Quick Sort](./QuickSort.md)
 - [Radix Sort](./RadixSort.md)
+- [Insertion Sort](./InsertionSort/insertion.md)
+- [Merge Sort](./MergeSort/merge.md)
+- [SelectionSort](./SelectionSort/selection.md)
