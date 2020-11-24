@@ -8,6 +8,8 @@ In a chess game, a Queen can move along 3 axes - horizontal, vertical and diagon
 
 Place N Queens on this board in such a way that no two Queens can kill each other (no Queen can reach the position of another Queen in just one move).
 
+![N Queens](https://assets.leetcode.com/uploads/2018/10/12/8-queens.png)
+
 ### Sudoku
 
 **Problem Statement:**
