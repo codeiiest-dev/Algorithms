@@ -32,6 +32,8 @@ A valid sudoku puzzle has a unique solution. However, puzzles with not enough in
 
 Given a maze, a starting point and a finishing point, write a backtracking algorithm that will find a path from the starting point to the finishing point.
 
+![Maze Solver](https://www.geeksforgeeks.org/wp-content/uploads/ratinmaze_filled_path1.png)
+
 ### String Permutation
 
 **Problem Statement:**
