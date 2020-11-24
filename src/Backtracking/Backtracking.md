@@ -4,4 +4,4 @@ Backtracking is an algorithmic-technique for solving problems recursively by try
 
 **Where is it used?**
 
-Usually in constraint satisfaction problems.
+Usually in constraint satisfaction problems. Backtracking is useful while solving certain NP-complete problems where the theoretical upperbound is as bad as N! or 2 ^ N or even N ^ N.
