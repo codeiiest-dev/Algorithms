@@ -24,6 +24,8 @@ We need to fill all the blocks in the grid with numbers from 1 to 9 only, while 
 
 A valid sudoku puzzle has a unique solution. However, puzzles with not enough initial values may have more than one valid solution - but these would not be valid sudoku puzzles.
 
+![Sudoku Solver](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Sudoku_solved_by_bactracking.gif/260px-Sudoku_solved_by_bactracking.gif)
+
 ### Maze Solver
 
 **Problem Statement:**
