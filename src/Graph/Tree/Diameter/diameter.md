@@ -1,4 +1,4 @@
-## **Diameter of a tree**
+# Diameter of a tree
 The Diameter of tree is the *maximum* length between two nodes. For example : <br>
 Consider the following tree of 7 nodes
 
@@ -8,7 +8,7 @@ Consider the following tree of 7 nodes
 
 Here, *Diameter* = 4 . 
 
-## **Algorithm**
+## Algorithm
 
 First, root the tree arbitarily.
 <div align = "center">
@@ -44,8 +44,6 @@ void dfs(int node){
 <div align = "center">
 <img height = "175"  src = "https://user-images.githubusercontent.com/58760297/99886436-8da8d000-2c62-11eb-8c39-27906df824e5.png"/>
 </div><br>
-
-
 
 Now calculate *path_length(node)* which denotes *maximum* length of a path whose highest point is node.
 
@@ -90,8 +88,8 @@ void dfs(int node){
 
 Finally, *Diameter = maximum* of all lengths in path_length. Therefore here, *Diameter* = 4.
 
-## *Problems*
+## Problems
 - [Tree Diameter](https://cses.fi/problemset/task/1131/)
-## *Reference*
+## Reference
 - Competitive Programmer's Handbook by Antii Laaksonen.
 

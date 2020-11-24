@@ -1,9 +1,22 @@
 # Summary
 
 - [Introduction](./introduction.md)
+- [Algebra](./Algebra/Algebra.md)
+  - [Sieve of Eratosthenes](./Algebra/SieveOfEratosthenes/SieveOfEratosthenes.md)
+  - [Fibonacci Sequence](./Algebra/Fibonacci/Fibonacci.md)
+  - [Linear Diophantine Equations](./Algebra/LinearDiophantine/LinearDiophantine.md)
+  - [Euler's Totient Function](./Algebra/EulerTotient/EulerTotient.md)
+  - [Modular Multiplicative Inverse](./Algebra/ModularInverse/ModularInverse.md)
+- [Searching Algorithms](./Searching_Algos/Linear_search/Explanation.md)
+  - [Linear Search](./Searching_Algos/Linear_search/Explanation.md)
+  - [Binary Search](./Searching_Algos/Binary_search/Explanation.md)
+  - [Binary vs Linear Search](./Searching_Algos/Binary_search/binaryVSlinear.md)
+  - [Ternary Search](./Searching_Algos/Ternary_search/Explanation.md)
+- [Sorting Algorithms](./SortingAlgorithms/README.md)
+  - [Quick Sort](./SortingAlgorithms/QuickSort.md)
+  - [Radix Sort](./SortingAlgorithms/RadixSort.md)
 - [Persistent Data Structure](./PersistentDS/README.md)
   - [Persistent Segment Trees](./PersistentDS/persistentST.md)
 - [Graph](./Graph/Graph.md)
   - [Tree](./Graph/Tree/Tree.md)
     - [Diameter](./Graph/Tree/Diameter/diameter.md) 
-    

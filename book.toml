@@ -1,6 +1,8 @@
 [book]
-authors = ["Mr-DareDevil"]
+authors = ["codeIIEST"]
 language = "en"
 multilingual = false
 src = "src"
 title = "Algorithms"
+[output.html]
+mathjax-support = true
