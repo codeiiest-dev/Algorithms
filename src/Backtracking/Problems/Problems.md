@@ -59,3 +59,5 @@ CBA
 Given a graph, find a way to colour every node such that no two connected nodes (nodes which share an edge) are coloured the same and minimum possible number of colours are used.
 
 *On a side-but-related note, one might be interested to check out the ***four colour theorem***, proved in 1976.*
+
+![M Colouring Graph](https://media.geeksforgeeks.org/wp-content/uploads/mcolor.png)
