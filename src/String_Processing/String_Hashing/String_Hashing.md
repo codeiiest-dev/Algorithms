@@ -1,4 +1,5 @@
-#  String Hashing
+# String Hashing
+
 We need this to compare the strings. Idea is to convert each string to integer and compare those instead of the actual strings which is O(1) operation. The conversion is done by a ***Hash-Function*** and the integer obtained corresponding to the string is called *hash* of the string.
 A widely used function is   *polynomial rolling hash function* :
 
@@ -28,6 +29,11 @@ Two strings with equal hashes need not be equal. There are possibilities of coll
 
 - Find all the duplicate strings from a given list of strings
 - Find the number of different substrings in a string
+
+## Practice Problems
+
+- [A Needle in the Haystack - SPOJ](http://www.spoj.com/problems/NHAY/)
+- [Password - Codeforces](http://codeforces.com/problemset/problem/126/B)
 
 ### References
 
