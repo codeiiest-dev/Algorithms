@@ -3,8 +3,7 @@
 ## Example Problem
 
 Given an array ``arr = [a1,a2,a3,a4,a5...,an] `` , we need to sort the array the array with the help of Merge Sort algorithm. 
-
----------------
+<hr>
 
 ## Discussion
 
@@ -16,7 +15,7 @@ Merge sort is an application of the Divide and Conquer Principle.The basic appro
 <img src="https://user-images.githubusercontent.com/66062504/99971682-89e08f00-2dc3-11eb-9860-973c837e0e6f.png"/>
 </p>
 
------------
+<hr>
 
 ### Code For Merge Sort
 
