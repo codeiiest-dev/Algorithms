@@ -21,7 +21,7 @@ def solve_backtrack():
         return True
 
     for candidate in candidates:
-        if not is_feasible(candidate): # if candidate is not a valid choice
+        if not is_feasible(candidate): // if candidate is not a valid choice
             continue
 
         accept(candidate) // use candidate for the current instance
