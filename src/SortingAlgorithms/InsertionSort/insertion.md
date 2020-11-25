@@ -4,7 +4,7 @@
 
 Given an array ``arr = [a1,a2,a3,a4,a5...,an] `` , we need to sort the array the array with the help of Insertion Sort algorithm.
 
----------------
+<hr>
 
 ## Discussion
 
@@ -63,16 +63,10 @@ When i=5:
 At this position we stop since we have traversed through the entire array.
 
 
--------------
+<hr>
 
 ## Code for the Algorithm
-
-
-
------------
-
-
-
+<hr>
 ### Code For Insertion Sort
 ```java
 public void sort(Comparable []a){
@@ -86,5 +80,5 @@ public void sort(Comparable []a){
 
 }
 ```        
----------------
+
 
