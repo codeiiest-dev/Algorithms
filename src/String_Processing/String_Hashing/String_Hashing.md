@@ -23,7 +23,7 @@ Here, it is m=10^9 + 9.
        } 
        return hash_value; 
      }
-Two strings with equal hashes need not be equal. There are possibilities of collision which can be resolved by simply calculating hashes using two different values of *p* and *m*which reduces the probability of collision.
+Two strings with equal hashes need not be equal. There are possibilities of collision which can be resolved by simply calculating hashes using two different values of *p* and *m* which reduces the probability of collision.
 
 ## Examples Of Uses
 
