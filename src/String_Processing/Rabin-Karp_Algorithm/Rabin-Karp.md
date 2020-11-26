@@ -35,8 +35,8 @@ Given two strings - a pattern *s* and a text *t*, determine if the pattern appea
 
 ## Problems for Practice
 
-    - [Codeforces - Good Substrings](http://codeforces.com/problemset/problem/271/D)
-    - [SPOJ - Pattern Find](http://www.spoj.com/problems/NAJPF/)
+- [Good_Substrings](https://codeforces.com/problemset/problem/271/D)
+- [Pattern_Find](https://www.spoj.com/problems/NAJPF/)
 
 ## References
 
