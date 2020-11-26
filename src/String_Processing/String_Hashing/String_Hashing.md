@@ -34,8 +34,8 @@ Two strings with equal hashes need not be equal. There are possibilities of coll
 
 ## Practice Problems
 
-- [A Needle in the Haystack - SPOJ](http://www.spoj.com/problems/NHAY/)
-- [Password - Codeforces](http://codeforces.com/problemset/problem/126/B)
+- [A Needle in the Haystack - SPOJ](https://www.spoj.com/problems/NAJPF/)
+- [Password - Codeforces](https://codeforces.com/problemset/problem/271/D)
 
 ### References
 
