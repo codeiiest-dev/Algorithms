@@ -8,6 +8,8 @@ A widely used function is   *polynomial rolling hash function* :
 where *p* and *m* are some chosen, positive numbers. *p* is a prime approximately equal to the number of characters in the input alphabet and *m* is a large number.
 Here, it is m=10^9 + 9.
 
+*The number of possible characters is higher  and pattern length can be large. So the numeric values cannot be practically stored as an integer. Therefore, the numeric value is calculated using modular arithmetic to make sure that the hash values can be stored in an integer variable.*
+
 ## Implementation
 
     long long compute_hash(string  const& s)
