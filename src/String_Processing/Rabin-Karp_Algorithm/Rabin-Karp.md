@@ -1,6 +1,6 @@
 # Rabin-Karp Algorithm
 
-This is one of the applications of [string hashing](./String_Processing/String_Hashing/String_Hashing.md).
+This is one of the applications of *String hashing*.
 
 Given two strings - a pattern *s* and a text *t*, determine if the pattern appears in the text and if it does, enumerate all its occurrences in O(|s|+|t|) time.
 
