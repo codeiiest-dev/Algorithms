@@ -7,7 +7,7 @@ Given two strings - a pattern *s* and a text *t*, determine if the pattern appea
 ***Algorithm*** : First the hash for the pattern *s* is calculated and then hash of all the substrings of text *t* of the same length as |s| is calculated. Now comparison between pattern and substring can be done in constant time.
 
 ## Implementation
-
+```cpp
     vector<int> rabin_karp(string  const& s, string  const& t) 
     {
         const  int p = 31; 
@@ -32,7 +32,7 @@ Given two strings - a pattern *s* and a text *t*, determine if the pattern appea
         } 
         return occurences; 
     }
-
+'''
 ## Problems for Practice
 
 - [Good_Substrings](https://codeforces.com/problemset/problem/271/D)
