@@ -89,7 +89,7 @@ void CountSort(int a[],int n)
 
 **Time Complexity**: O(n+k) where n is the number of elements in input array and k is the range of input. 
 
-**Space Complexity**: Algoithm takes extra space of O(k).
+**Space Complexity**: Algorithm takes extra space of O(k).
 
 <hr>
 
