@@ -67,7 +67,6 @@ At this position we stop since we have traversed through the entire array.
 
 ## Code for the Algorithm
 
-<hr>
 
 ### Code For Insertion Sort
 
