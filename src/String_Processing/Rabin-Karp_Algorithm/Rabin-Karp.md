@@ -32,7 +32,7 @@ Given two strings - a pattern *s* and a text *t*, determine if the pattern appea
         } 
         return occurences; 
     }
-'''
+```
 ## Problems for Practice
 
 - [Good_Substrings](https://codeforces.com/problemset/problem/271/D)
