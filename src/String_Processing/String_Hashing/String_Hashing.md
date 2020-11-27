@@ -11,7 +11,7 @@ Here, it is m=10^9 + 9.
 *The number of possible characters is higher  and pattern length can be large. So the numeric values cannot be practically stored as an integer. Therefore, the numeric value is calculated using modular arithmetic to make sure that the hash values can be stored in an integer variable.*
 
 ## Implementation
-
+```cpp
     long long compute_hash(string  const& s)
      { 
        const  int p = 31; 
@@ -25,6 +25,7 @@ Here, it is m=10^9 + 9.
        } 
        return hash_value; 
      }
+```
 Two strings with equal hashes need not be equal. There are possibilities of collision which can be resolved by simply calculating hashes using two different values of *p* and *m* which reduces the probability of collision.
 
 ## Examples Of Uses
