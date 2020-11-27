@@ -66,8 +66,11 @@ At this position we stop since we have traversed through the entire array.
 <hr>
 
 ## Code for the Algorithm
+
 <hr>
+
 ### Code For Insertion Sort
+
 ```java
 public void sort(Comparable []a){
    for(int i=0;i<a.length;i++){
