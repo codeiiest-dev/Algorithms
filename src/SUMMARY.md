@@ -14,6 +14,9 @@
   - [Ternary Search](./Searching_Algos/Ternary_search/Explanation.md)
 - [Sorting Algorithms](./SortingAlgorithms/README.md)
   - [Quick Sort](./SortingAlgorithms/QuickSort.md)
+  - [Count Sort](./SortingAlgorithms/CountSort.md)
+  - [Bucket Sort](./SortingAlgorithms/BucketSort.md)
+  - [Heap Sort](./SortingAlgorithms/HeapSort.md)
   - [Radix Sort](./SortingAlgorithms/RadixSort.md)
   - [Insertion Sort](./SortingAlgorithms/InsertionSort/insertion.md)
   - [Merge Sort](./SortingAlgorithms/MergeSort/merge.md)
@@ -26,3 +29,9 @@
 - [Graph](./Graph/Graph.md)
   - [Tree](./Graph/Tree/Tree.md)
     - [Diameter](./Graph/Tree/Diameter/diameter.md) 
+- [String Processing](./String_Processing/String_Processing.md)
+  - [String Hashing](./String_Processing/String_Hashing/String_Hashing.md)
+  - [Rabin-Karp Algorithm](./String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.md)
+
+
+
