@@ -28,10 +28,10 @@
   - [Persistent Segment Trees](./PersistentDS/persistentST.md)
 - [Graph](./Graph/Graph.md)
   - [Tree](./Graph/Tree/Tree.md)
-    - [Diameter](./Graph/Tree/Diameter/diameter.md) 
+    - [Diameter](./Graph/Tree/Diameter/diameter.md)
 - [String Processing](./String_Processing/String_Processing.md)
   - [String Hashing](./String_Processing/String_Hashing/String_Hashing.md)
   - [Rabin-Karp Algorithm](./String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.md)
-
-
-
+- [Machine Learning Algorithms](./MachineLearningAlgorithms/README.md)
+  - [Regression](./MachineLearningAlgorithms/Regression/Regression.md)
+    - [Linear Regression](./MachineLearningAlgorithms/Regression/LinearRegression/LinearRegression.md)
