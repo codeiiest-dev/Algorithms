@@ -3,7 +3,7 @@
 <center>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=for-the-badge)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=for-the-badge)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </center>
@@ -87,6 +87,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Sanjana00"><img src="https://avatars1.githubusercontent.com/u/53122829?v=4" width="100px;" alt=""/><br /><sub><b>Sanjana Chakravarty</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=Sanjana00" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Ahel2000"><img src="https://avatars3.githubusercontent.com/u/66062504?v=4" width="100px;" alt=""/><br /><sub><b>Ahel Das Chatterjee</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=Ahel2000" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Yukti-1"><img src="https://avatars1.githubusercontent.com/u/58746604?v=4" width="100px;" alt=""/><br /><sub><b>Yukti-1</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=Yukti-1" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/siddhantkhare24/"><img src="https://avatars0.githubusercontent.com/u/55068936?v=4" width="100px;" alt=""/><br /><sub><b>Siddhant Khare</b></sub></a><br /><a href="https://github.com/codeiiest-dev/Algorithms/commits?author=Siddhant-K-code" title="Documentation">📖</a></td>
   </tr>
 </table>
 
