@@ -6,4 +6,4 @@ These are the used to predict a continuous value.
 
 ## Topics Covered
 
-- [Linear Regression](./Regression/Explaination.md)
+- [Linear Regression](./LinearRegression/LinearRegression.md)

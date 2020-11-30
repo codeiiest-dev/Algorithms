@@ -6,5 +6,5 @@ These are the engines of Machine Learning.
 
 ## Topics Covered
 
-- [Regression](./Regression.md)
-    - [Linear Regression](./Regression/LinearRegression/LinearRegression.md)
+- [Regression](./Regression/Regression.md)
+  - [Linear Regression](./Regression/LinearRegression/LinearRegression.md)
