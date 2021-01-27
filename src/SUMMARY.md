@@ -31,6 +31,7 @@
 - [Graph](./Graph/Graph.md)
   - [Tree](./Graph/Tree/Tree.md)
     - [Diameter](./Graph/Tree/Diameter/diameter.md)
+    - [Lowest Common Ancestor](./Graph/Tree/Lowest_Common_Ancestor/LCA.md)
 - [String Processing](./String_Processing/String_Processing.md)
   - [String Hashing](./String_Processing/String_Hashing/String_Hashing.md)
   - [Rabin-Karp Algorithm](./String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.md)
