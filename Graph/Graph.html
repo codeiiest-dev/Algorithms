@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Graph - Algorithms</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../Algebra/Algebra.html"><strong aria-hidden="true">2.</strong> Algebra</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Algebra/SieveOfEratosthenes/SieveOfEratosthenes.html"><strong aria-hidden="true">2.1.</strong> Sieve of Eratosthenes</a></li><li class="chapter-item expanded "><a href="../Algebra/Fibonacci/Fibonacci.html"><strong aria-hidden="true">2.2.</strong> Fibonacci Sequence</a></li><li class="chapter-item expanded "><a href="../Algebra/LinearDiophantine/LinearDiophantine.html"><strong aria-hidden="true">2.3.</strong> Linear Diophantine Equations</a></li><li class="chapter-item expanded "><a href="../Algebra/EulerTotient/EulerTotient.html"><strong aria-hidden="true">2.4.</strong> Euler's Totient Function</a></li><li class="chapter-item expanded "><a href="../Algebra/ModularInverse/ModularInverse.html"><strong aria-hidden="true">2.5.</strong> Modular Multiplicative Inverse</a></li></ol></li><li class="chapter-item expanded "><a href="../Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.</strong> Searching Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.1.</strong> Linear Search</a></li><li class="chapter-item expanded "><a href="../Searching_Algos/Binary_search/Explanation.html"><strong aria-hidden="true">3.2.</strong> Binary Search</a></li><li class="chapter-item expanded "><a href="../Searching_Algos/Binary_search/binaryVSlinear.html"><strong aria-hidden="true">3.3.</strong> Binary vs Linear Search</a></li><li class="chapter-item expanded "><a href="../Searching_Algos/Ternary_search/Explanation.html"><strong aria-hidden="true">3.4.</strong> Ternary Search</a></li></ol></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/index.html"><strong aria-hidden="true">4.</strong> Sorting Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SortingAlgorithms/BubbleSort.html"><strong aria-hidden="true">4.1.</strong> Bubble Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/QuickSort.html"><strong aria-hidden="true">4.2.</strong> Quick Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/CountSort.html"><strong aria-hidden="true">4.3.</strong> Count Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/BucketSort.html"><strong aria-hidden="true">4.4.</strong> Bucket Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/HeapSort.html"><strong aria-hidden="true">4.5.</strong> Heap Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/RadixSort.html"><strong aria-hidden="true">4.6.</strong> Radix Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/InsertionSort/insertion.html"><strong aria-hidden="true">4.7.</strong> Insertion Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/ShellSort.html"><strong aria-hidden="true">4.8.</strong> Shell Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/MergeSort/merge.html"><strong aria-hidden="true">4.9.</strong> Merge Sort</a></li><li class="chapter-item expanded "><a href="../SortingAlgorithms/SelectionSort/selection.html"><strong aria-hidden="true">4.10.</strong> Selection Sort</a></li></ol></li><li class="chapter-item expanded "><a href="../Backtracking/Backtracking.html"><strong aria-hidden="true">5.</strong> Backtracking</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Backtracking/Pseudocode/Pseudocode.html"><strong aria-hidden="true">5.1.</strong> Pseudocode</a></li><li class="chapter-item expanded "><a href="../Backtracking/Problems/Problems.html"><strong aria-hidden="true">5.2.</strong> Problems</a></li></ol></li><li class="chapter-item expanded "><a href="../PersistentDS/index.html"><strong aria-hidden="true">6.</strong> Persistent Data Structure</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../PersistentDS/persistentST.html"><strong aria-hidden="true">6.1.</strong> Persistent Segment Trees</a></li></ol></li><li class="chapter-item expanded "><a href="../Graph/Graph.html" class="active"><strong aria-hidden="true">7.</strong> Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Graph/Tree/Tree.html"><strong aria-hidden="true">7.1.</strong> Tree</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Graph/Tree/Diameter/diameter.html"><strong aria-hidden="true">7.1.1.</strong> Diameter</a></li><li class="chapter-item expanded "><a href="../Graph/Tree/Lowest_Common_Ancestor/LCA.html"><strong aria-hidden="true">7.1.2.</strong> Lowest Common Ancestor</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../String_Processing/String_Processing.html"><strong aria-hidden="true">8.</strong> String Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../String_Processing/String_Hashing/String_Hashing.html"><strong aria-hidden="true">8.1.</strong> String Hashing</a></li><li class="chapter-item expanded "><a href="../String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.html"><strong aria-hidden="true">8.2.</strong> Rabin-Karp Algorithm</a></li></ol></li><li class="chapter-item expanded "><a href="../MachineLearningAlgorithms/index.html"><strong aria-hidden="true">9.</strong> Machine Learning Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../MachineLearningAlgorithms/Regression/Regression.html"><strong aria-hidden="true">9.1.</strong> Regression</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../MachineLearningAlgorithms/Regression/LinearRegression/LinearRegression.html"><strong aria-hidden="true">9.1.1.</strong> Linear Regression</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Algorithms</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../PersistentDS/persistentST.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Graph/Tree/Tree.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../PersistentDS/persistentST.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../Graph/Tree/Tree.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

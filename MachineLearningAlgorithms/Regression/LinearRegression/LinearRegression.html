@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Linear Regression - Algorithms</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../../favicon.png">
+        
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../../Algebra/Algebra.html"><strong aria-hidden="true">2.</strong> Algebra</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Algebra/SieveOfEratosthenes/SieveOfEratosthenes.html"><strong aria-hidden="true">2.1.</strong> Sieve of Eratosthenes</a></li><li class="chapter-item expanded "><a href="../../../Algebra/Fibonacci/Fibonacci.html"><strong aria-hidden="true">2.2.</strong> Fibonacci Sequence</a></li><li class="chapter-item expanded "><a href="../../../Algebra/LinearDiophantine/LinearDiophantine.html"><strong aria-hidden="true">2.3.</strong> Linear Diophantine Equations</a></li><li class="chapter-item expanded "><a href="../../../Algebra/EulerTotient/EulerTotient.html"><strong aria-hidden="true">2.4.</strong> Euler's Totient Function</a></li><li class="chapter-item expanded "><a href="../../../Algebra/ModularInverse/ModularInverse.html"><strong aria-hidden="true">2.5.</strong> Modular Multiplicative Inverse</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.</strong> Searching Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.1.</strong> Linear Search</a></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Binary_search/Explanation.html"><strong aria-hidden="true">3.2.</strong> Binary Search</a></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Binary_search/binaryVSlinear.html"><strong aria-hidden="true">3.3.</strong> Binary vs Linear Search</a></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Ternary_search/Explanation.html"><strong aria-hidden="true">3.4.</strong> Ternary Search</a></li></ol></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/index.html"><strong aria-hidden="true">4.</strong> Sorting Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/BubbleSort.html"><strong aria-hidden="true">4.1.</strong> Bubble Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/QuickSort.html"><strong aria-hidden="true">4.2.</strong> Quick Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/CountSort.html"><strong aria-hidden="true">4.3.</strong> Count Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/BucketSort.html"><strong aria-hidden="true">4.4.</strong> Bucket Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/HeapSort.html"><strong aria-hidden="true">4.5.</strong> Heap Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/RadixSort.html"><strong aria-hidden="true">4.6.</strong> Radix Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/InsertionSort/insertion.html"><strong aria-hidden="true">4.7.</strong> Insertion Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/ShellSort.html"><strong aria-hidden="true">4.8.</strong> Shell Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/MergeSort/merge.html"><strong aria-hidden="true">4.9.</strong> Merge Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/SelectionSort/selection.html"><strong aria-hidden="true">4.10.</strong> Selection Sort</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Backtracking/Backtracking.html"><strong aria-hidden="true">5.</strong> Backtracking</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Backtracking/Pseudocode/Pseudocode.html"><strong aria-hidden="true">5.1.</strong> Pseudocode</a></li><li class="chapter-item expanded "><a href="../../../Backtracking/Problems/Problems.html"><strong aria-hidden="true">5.2.</strong> Problems</a></li></ol></li><li class="chapter-item expanded "><a href="../../../PersistentDS/index.html"><strong aria-hidden="true">6.</strong> Persistent Data Structure</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../PersistentDS/persistentST.html"><strong aria-hidden="true">6.1.</strong> Persistent Segment Trees</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Graph/Graph.html"><strong aria-hidden="true">7.</strong> Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Graph/Tree/Tree.html"><strong aria-hidden="true">7.1.</strong> Tree</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Graph/Tree/Diameter/diameter.html"><strong aria-hidden="true">7.1.1.</strong> Diameter</a></li><li class="chapter-item expanded "><a href="../../../Graph/Tree/Lowest_Common_Ancestor/LCA.html"><strong aria-hidden="true">7.1.2.</strong> Lowest Common Ancestor</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../String_Processing/String_Processing.html"><strong aria-hidden="true">8.</strong> String Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../String_Processing/String_Hashing/String_Hashing.html"><strong aria-hidden="true">8.1.</strong> String Hashing</a></li><li class="chapter-item expanded "><a href="../../../String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.html"><strong aria-hidden="true">8.2.</strong> Rabin-Karp Algorithm</a></li></ol></li><li class="chapter-item expanded "><a href="../../../MachineLearningAlgorithms/index.html"><strong aria-hidden="true">9.</strong> Machine Learning Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../MachineLearningAlgorithms/Regression/Regression.html"><strong aria-hidden="true">9.1.</strong> Regression</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../MachineLearningAlgorithms/Regression/LinearRegression/LinearRegression.html" class="active"><strong aria-hidden="true">9.1.1.</strong> Linear Regression</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Algorithms</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#linear-regression" id="linear-regression">Linear Regression</a></h1>
+<p>Linear regression is perhaps one among the foremost necessary and wide used regression techniques. It’s among the only regression ways. one among its main blessings is that the simple deciphering results.</p>
+<h2><a class="header" href="#problem-formulation" id="problem-formulation">Problem Formulation</a></h2>
+<p>When implementing regression toward the mean of some variable quantity variable quantity the set of freelance variables 𝐱 = (𝑥₁, …, 𝑥ᵣ), wherever wherever is that the variety of predictors, you assume a linear relationship between 𝑦 and 𝐱: 𝑦 = 𝛽₀ + 𝛽₁𝑥₁ + ⋯ + 𝛽ᵣ𝑥ᵣ + 𝜀. This equation is that the regression of y on x. 𝛽₀, 𝛽₁, …, 𝛽ᵣ area unit the regression coefficients, and 𝜀 is that the random error.</p>
+<p>Linear regression calculates the estimators of the regression coefficients or just the expected weights, denoted with 𝑏₀, 𝑏₁, …, 𝑏ᵣ. They outline the calculable regression operate 𝑓(𝐱) = 𝑏₀ + 𝑏₁𝑥₁ + ⋯ + 𝑏ᵣ𝑥ᵣ. This operate ought to capture the dependencies between the inputs and output sufficiently well.</p>
+<p>The calculable or expected response, 𝑓(𝐱ᵢ), for every for every = one, …, 𝑛, ought to be as shut as potential to the corresponding actual response 𝑦ᵢ. The variations variations - 𝑓(𝐱ᵢ) for all observations 𝑖 = one, …, 𝑛, area unit known as the residuals. Regression is regarding deciding the most effective expected weights, that's the weights adore the littlest residuals.</p>
+<p>To get the most effective weights, you always minimize the add of square residuals (SSR) for all observations 𝑖 = one, …, 𝑛: SSR = Σᵢ(𝑦ᵢ - 𝑓(𝐱ᵢ))². This approach is named the tactic of normal statistical procedure.</p>
+<h2><a class="header" href="#regression-performance" id="regression-performance">Regression Performance</a></h2>
+<p>The variation of actual responses 𝑦ᵢ, 𝑖 = 1, …, 𝑛, happens partially thanks to the dependence on the predictors 𝐱ᵢ. However, there's additionally a further inherent variance of the output.</p>
+<p>The constant of determination, denoted as 𝑅², tells you which of them quantity of variation in 𝑦 will be explained by the dependence on 𝐱 mistreatment the actual regression model. Larger 𝑅² indicates a better fit and means that the model can better explain the variation of the output with different inputs.</p>
+<p>The value 𝑅² = 1 corresponds to SSR = 0, that is to the perfect fit since the values of predicted and actual responses fit completely to each other.</p>
+<h2><a class="header" href="#implementing-linear-regression-in-python" id="implementing-linear-regression-in-python">Implementing Linear Regression in Python</a></h2>
+<p>It’s time to start implementing linear regression in Python. Basically, all you should do is apply the proper packages and their functions and classes.</p>
+<h3><a class="header" href="#python-packages-for-linear-regression" id="python-packages-for-linear-regression">Python Packages for Linear Regression</a></h3>
+<p>The package NumPy is a fundamental Python scientific package that allows many high-performance operations on single- and multi-dimensional arrays. It also offers many mathematical routines. Of course, it’s open source.</p>
+<p>If you’re not familiar with NumPy, you can use the official <a href="https://docs.scipy.org/doc/numpy/user/index.html">NumPy User Guide</a> .</p>
+<p>The package scikit-learn is a widely used Python library for machine learning, built on top of NumPy and some other packages. It provides the means for preprocessing data, reducing dimensionality, implementing regression, classification, clustering, and more. Like NumPy, scikit-learn is also open source.</p>
+<p>You can check the page <a href="https://scikit-learn.org/stable/modules/linear_model.html">Generalized Linear Models</a> on the <a href="https://scikit-learn.org/stable/">scikit-learn web site</a> to learn more about linear models and get deeper insight into how this package works.</p>
+<p>If you want to implement linear regression and need the functionality beyond the scope of scikit-learn, you should consider statsmodels. It’s a powerful Python package for the estimation of statistical models, performing tests, and more. It’s open source as well.</p>
+<p>You can find more information on statsmodels on its <a href="https://www.statsmodels.org/stable/index.html">official web site</a>.</p>
+<h3><a class="header" href="#simple-linear-regression-with-scikit-learn" id="simple-linear-regression-with-scikit-learn">Simple Linear Regression With scikit-learn</a></h3>
+<p>Let’s start with the simplest case, which is simple linear regression.</p>
+<p>There are five basic steps when you’re implementing linear regression:</p>
+<ul>
+<li>Import the packages and classes you need.</li>
+<li>Provide data to work with and eventually do appropriate transformations.</li>
+<li>Create a regression model and fit it with existing data.</li>
+<li>Check the results of model fitting to know whether the model is satisfactory.</li>
+<li>Apply the model for predictions.</li>
+</ul>
+<p>These steps are more or less general for most of the regression approaches and implementations.</p>
+<p><strong>Step 1: Import packages and classes</strong></p>
+<p>The first step is to import the package numpy and the class LinearRegression from sklearn.linear_model:</p>
+<pre><code>import numpy as np
+from sklearn.linear_model import LinearRegression
+</code></pre>
+<p>Now, you have all the functionalities you need to implement linear regression.</p>
+<p>The fundamental data type of NumPy is the array type called numpy.ndarray. The rest of this article uses the term array to refer to instances of the type numpy.ndarray.</p>
+<p>The class sklearn.linear_model.LinearRegression will be used to perform linear and polynomial regression and make predictions accordingly.</p>
+<p><strong>Step 2: Provide data</strong>
+The second step is defining data to work with. The inputs (regressors, 𝑥) and output (predictor, 𝑦) should be arrays (the instances of the class numpy.ndarray) or similar objects. This is the simplest way of providing data for regression:</p>
+<pre><code>x = np.array([5, 15, 25, 35, 45, 55]).reshape((-1, 1))
+y = np.array([5, 20, 14, 32, 22, 38])
+</code></pre>
+<p>Now, you have two arrays: the input x and output y. You should call .reshape() on x because this array is required to be two-dimensional, or to be more precise, to have one column and as many rows as necessary. That’s exactly what the argument (-1, 1) of .reshape() specifies.</p>
+<p>This is how x and y look now:</p>
+<pre><code>&gt;&gt;&gt; print(x)
+[[ 5]
+ [15]
+ [25]
+ [35]
+ [45]
+ [55]]
+&gt;&gt;&gt; print(y)
+[ 5 20 14 32 22 38]
+</code></pre>
+<p>As you can see, x has two dimensions, and x.shape is (6, 1), while y has a single dimension, and y.shape is (6,).</p>
+<p><strong>Step 3: Create a model and fit it</strong>
+The next step is to create a linear regression model and fit it using the existing data.</p>
+<p>Let’s create an instance of the class LinearRegression, which will represent the regression model:</p>
+<pre><code>model = LinearRegression()
+</code></pre>
+<p>This statement creates the variable model as the instance of LinearRegression. You can provide several optional parameters to LinearRegression:</p>
+<ul>
+<li>fit_intercept is a Boolean (True by default) that decides whether to calculate the intercept 𝑏₀ (True) or consider it equal to zero (False).</li>
+<li>normalize is a Boolean (False by default) that decides whether to normalize the input variables (True) or not (False).</li>
+<li>copy_X is a Boolean (True by default) that decides whether to copy (True) or overwrite the input variables (False).</li>
+<li>n_jobs is an integer or None (default) and represents the number of jobs used in parallel computation. None usually means one job and -1 to use all processors.</li>
+</ul>
+<p>This example uses the default values of all parameters.</p>
+<p>It’s time to start using the model. First, you need to call .fit() on model:</p>
+<pre><code>model.fit(x, y)
+</code></pre>
+<p>With .fit(), you calculate the optimal values of the weights 𝑏₀ and 𝑏₁, using the existing input and output (x and y) as the arguments. In other words, .fit() fits the model. It returns self, which is the variable model itself. That’s why you can replace the last two statements with this one:</p>
+<pre><code>model = LinearRegression().fit(x, y)
+</code></pre>
+<p>This statement does the same thing as the previous two. It’s just shorter.</p>
+<p><strong>Step 4: Get results</strong></p>
+<p>Once you have your model fitted, you can get the results to check whether the model works satisfactorily and interpret it.</p>
+<p>You can obtain the coefficient of determination (𝑅²) with .score() called on model:</p>
+<pre><code>&gt;&gt;&gt; r_sq = model.score(x, y)
+&gt;&gt;&gt; print('coefficient of determination:', r_sq)
+coefficient of determination: 0.715875613747954
+</code></pre>
+<p>When you’re applying .score(), the arguments are also the predictor x and regressor y, and the return value is 𝑅².</p>
+<p>The attributes of model are .intercept*, which represents the coefficient, 𝑏₀ and .coef*, which represents 𝑏₁:</p>
+<pre><code>&gt;&gt;&gt; print('intercept:', model.intercept_)
+intercept: 5.633333333333329
+&gt;&gt;&gt; print('slope:', model.coef_)
+slope: [0.54]
+</code></pre>
+<p>The code above illustrates how to get 𝑏₀ and 𝑏₁. You can notice that .intercept* is a scalar, while .coef* is an array.</p>
+<p>The value 𝑏₀ = 5.63 (approximately) illustrates that your model predicts the response 5.63 when 𝑥 is zero. The value 𝑏₁ = 0.54 means that the predicted response rises by 0.54 when 𝑥 is increased by one.</p>
+<p>You should notice that you can provide y as a two-dimensional array as well. In this case, you’ll get a similar result. This is how it might look:</p>
+<pre><code>&gt;&gt;&gt; new_model = LinearRegression().fit(x, y.reshape((-1, 1)))
+&gt;&gt;&gt; print('intercept:', new_model.intercept_)
+intercept: [5.63333333]
+&gt;&gt;&gt; print('slope:', new_model.coef_)
+slope: [[0.54]]
+</code></pre>
+<p>As you can see, this example is very similar to the previous one, but in this case, .intercept* is a one-dimensional array with the single element 𝑏₀, and .coef* is a two-dimensional array with the single element 𝑏₁.</p>
+<p><strong>Step 5: Predict response</strong></p>
+<p>Once there is a satisfactory model, you can use it for predictions with either existing or new data.</p>
+<p>To obtain the predicted response, use .predict():</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.predict(x)
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[ 8.33333333 13.73333333 19.13333333 24.53333333 29.93333333 35.33333333]
+</code></pre>
+<p>When applying .predict(), you pass the regressor as the argument and get the corresponding predicted response.</p>
+<p>This is a nearly identical way to predict the response:</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.intercept_ + model.coef_ * x
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[[ 8.33333333]
+ [13.73333333]
+ [19.13333333]
+ [24.53333333]
+ [29.93333333]
+ [35.33333333]]
+</code></pre>
+<p>In this case, you multiply each element of x with model.coef* and add model.intercept* to the product.</p>
+<p>The output here differs from the previous example only in dimensions. The predicted response is now a two-dimensional array, while in the previous case, it had one dimension.</p>
+<p>If you reduce the number of dimensions of x to one, these two approaches will yield the same result. You can do this by replacing x with x.reshape(-1), x.flatten(), or x.ravel() when multiplying it with model.coef_.</p>
+<p>In practice, regression models are often applied for forecasts. This means that you can use fitted models to calculate the outputs based on some other, new inputs:</p>
+<pre><code>&gt;&gt;&gt; x_new = np.arange(5).reshape((-1, 1))
+&gt;&gt;&gt; print(x_new)
+[[0]
+ [1]
+ [2]
+ [3]
+ [4]]
+&gt;&gt;&gt; y_new = model.predict(x_new)
+&gt;&gt;&gt; print(y_new)
+[5.63333333 6.17333333 6.71333333 7.25333333 7.79333333]
+</code></pre>
+<p>Here .predict() is applied to the new regressor x_new and yields the response y_new. This example conveniently uses arange() from numpy to generate an array with the elements from 0 (inclusive) to 5 (exclusive), that is 0, 1, 2, 3, and 4.</p>
+<p>You can find more information about LinearRegression on the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">official documentation page</a>.</p>
+<h3><a class="header" href="#multiple-linear-regression-with-scikit-learn" id="multiple-linear-regression-with-scikit-learn">Multiple Linear Regression With scikit-learn</a></h3>
+<p>You can implement multiple linear regression following the same steps as you would for simple regression.</p>
+<p><strong>Steps 1 and 2: Import packages and classes, and provide data</strong></p>
+<p>First, you import numpy and sklearn.linear_model.LinearRegression and provide known inputs and output:</p>
+<pre><code>import numpy as np
+from sklearn.linear_model import LinearRegression
+
+x = [[0, 1], [5, 1], [15, 2], [25, 5], [35, 11], [45, 15], [55, 34], [60, 35]]
+y = [4, 5, 20, 14, 32, 22, 38, 43]
+x, y = np.array(x), np.array(y)
+</code></pre>
+<p>That’s a simple way to define the input x and output y. You can print x and y to see how they look now:</p>
+<pre><code>&gt;&gt;&gt; print(x)
+[[ 0  1]
+ [ 5  1]
+ [15  2]
+ [25  5]
+ [35 11]
+ [45 15]
+ [55 34]
+ [60 35]]
+&gt;&gt;&gt; print(y)
+[ 4  5 20 14 32 22 38 43]
+</code></pre>
+<p>In multiple linear regression, x is a two-dimensional array with at least two columns, while y is usually a one-dimensional array. This is a simple example of multiple linear regression, and x has exactly two columns.</p>
+<p><strong>Step 3: Create a model and fit it</strong></p>
+<p>The next step is to create the regression model as an instance of LinearRegression and fit it with .fit():</p>
+<pre><code>model = LinearRegression().fit(x, y)
+</code></pre>
+<p>The result of this statement is the variable model referring to the object of type LinearRegression. It represents the regression model fitted with existing data.</p>
+<p><strong>Step 4: Get results</strong></p>
+<p>You can obtain the properties of the model the same way as in the case of simple linear regression:</p>
+<pre><code>&gt;&gt;&gt; r_sq = model.score(x, y)
+&gt;&gt;&gt; print('coefficient of determination:', r_sq)
+coefficient of determination: 0.8615939258756776
+&gt;&gt;&gt; print('intercept:', model.intercept_)
+intercept: 5.52257927519819
+&gt;&gt;&gt; print('slope:', model.coef_)
+slope: [0.44706965 0.25502548]
+</code></pre>
+<p>You obtain the value of 𝑅² using .score() and the values of the estimators of regression coefficients with .intercept* and .coef*. Again, .intercept* holds the bias 𝑏₀, while now .coef* is an array containing 𝑏₁ and 𝑏₂ respectively.</p>
+<p>In this example, the intercept is approximately 5.52, and this is the value of the predicted response when 𝑥₁ = 𝑥₂ = 0. The increase of 𝑥₁ by 1 yields the rise of the predicted response by 0.45. Similarly, when 𝑥₂ grows by 1, the response rises by 0.26.</p>
+<p><strong>Step 5: Predict response</strong></p>
+<p>Predictions also work the same way as in the case of simple linear regression:</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.predict(x)
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[ 5.77760476  8.012953   12.73867497 17.9744479  23.97529728 29.4660957
+ 38.78227633 41.27265006]
+</code></pre>
+<p>The predicted response is obtained with .predict(), which is very similar to the following:</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.intercept_ + np.sum(model.coef_ * x, axis=1)
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[ 5.77760476  8.012953   12.73867497 17.9744479  23.97529728 29.4660957
+ 38.78227633 41.27265006]
+</code></pre>
+<p>You can predict the output values by multiplying each column of the input with the appropriate weight, summing the results and adding the intercept to the sum.</p>
+<p>You can apply this model to new data as well:</p>
+<pre><code>&gt;&gt;&gt; x_new = np.arange(10).reshape((-1, 2))
+&gt;&gt;&gt; print(x_new)
+[[0 1]
+ [2 3]
+ [4 5]
+ [6 7]
+ [8 9]]
+&gt;&gt;&gt; y_new = model.predict(x_new)
+&gt;&gt;&gt; print(y_new)
+[ 5.77760476  7.18179502  8.58598528  9.99017554 11.3943658 ]
+</code></pre>
+<p>That’s the prediction using a linear regression model.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../../MachineLearningAlgorithms/Regression/Regression.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../../MachineLearningAlgorithms/Regression/Regression.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

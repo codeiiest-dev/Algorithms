@@ -1,0 +1,2235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Algorithms</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="Algebra/Algebra.html"><strong aria-hidden="true">2.</strong> Algebra</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Algebra/SieveOfEratosthenes/SieveOfEratosthenes.html"><strong aria-hidden="true">2.1.</strong> Sieve of Eratosthenes</a></li><li class="chapter-item expanded "><a href="Algebra/Fibonacci/Fibonacci.html"><strong aria-hidden="true">2.2.</strong> Fibonacci Sequence</a></li><li class="chapter-item expanded "><a href="Algebra/LinearDiophantine/LinearDiophantine.html"><strong aria-hidden="true">2.3.</strong> Linear Diophantine Equations</a></li><li class="chapter-item expanded "><a href="Algebra/EulerTotient/EulerTotient.html"><strong aria-hidden="true">2.4.</strong> Euler's Totient Function</a></li><li class="chapter-item expanded "><a href="Algebra/ModularInverse/ModularInverse.html"><strong aria-hidden="true">2.5.</strong> Modular Multiplicative Inverse</a></li></ol></li><li class="chapter-item expanded "><a href="Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.</strong> Searching Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.1.</strong> Linear Search</a></li><li class="chapter-item expanded "><a href="Searching_Algos/Binary_search/Explanation.html"><strong aria-hidden="true">3.2.</strong> Binary Search</a></li><li class="chapter-item expanded "><a href="Searching_Algos/Binary_search/binaryVSlinear.html"><strong aria-hidden="true">3.3.</strong> Binary vs Linear Search</a></li><li class="chapter-item expanded "><a href="Searching_Algos/Ternary_search/Explanation.html"><strong aria-hidden="true">3.4.</strong> Ternary Search</a></li></ol></li><li class="chapter-item expanded "><a href="SortingAlgorithms/index.html"><strong aria-hidden="true">4.</strong> Sorting Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="SortingAlgorithms/BubbleSort.html"><strong aria-hidden="true">4.1.</strong> Bubble Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/QuickSort.html"><strong aria-hidden="true">4.2.</strong> Quick Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/CountSort.html"><strong aria-hidden="true">4.3.</strong> Count Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/BucketSort.html"><strong aria-hidden="true">4.4.</strong> Bucket Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/HeapSort.html"><strong aria-hidden="true">4.5.</strong> Heap Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/RadixSort.html"><strong aria-hidden="true">4.6.</strong> Radix Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/InsertionSort/insertion.html"><strong aria-hidden="true">4.7.</strong> Insertion Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/ShellSort.html"><strong aria-hidden="true">4.8.</strong> Shell Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/MergeSort/merge.html"><strong aria-hidden="true">4.9.</strong> Merge Sort</a></li><li class="chapter-item expanded "><a href="SortingAlgorithms/SelectionSort/selection.html"><strong aria-hidden="true">4.10.</strong> Selection Sort</a></li></ol></li><li class="chapter-item expanded "><a href="Backtracking/Backtracking.html"><strong aria-hidden="true">5.</strong> Backtracking</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Backtracking/Pseudocode/Pseudocode.html"><strong aria-hidden="true">5.1.</strong> Pseudocode</a></li><li class="chapter-item expanded "><a href="Backtracking/Problems/Problems.html"><strong aria-hidden="true">5.2.</strong> Problems</a></li></ol></li><li class="chapter-item expanded "><a href="PersistentDS/index.html"><strong aria-hidden="true">6.</strong> Persistent Data Structure</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="PersistentDS/persistentST.html"><strong aria-hidden="true">6.1.</strong> Persistent Segment Trees</a></li></ol></li><li class="chapter-item expanded "><a href="Graph/Graph.html"><strong aria-hidden="true">7.</strong> Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Graph/Tree/Tree.html"><strong aria-hidden="true">7.1.</strong> Tree</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Graph/Tree/Diameter/diameter.html"><strong aria-hidden="true">7.1.1.</strong> Diameter</a></li><li class="chapter-item expanded "><a href="Graph/Tree/Lowest_Common_Ancestor/LCA.html"><strong aria-hidden="true">7.1.2.</strong> Lowest Common Ancestor</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="String_Processing/String_Processing.html"><strong aria-hidden="true">8.</strong> String Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="String_Processing/String_Hashing/String_Hashing.html"><strong aria-hidden="true">8.1.</strong> String Hashing</a></li><li class="chapter-item expanded "><a href="String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.html"><strong aria-hidden="true">8.2.</strong> Rabin-Karp Algorithm</a></li></ol></li><li class="chapter-item expanded "><a href="MachineLearningAlgorithms/index.html"><strong aria-hidden="true">9.</strong> Machine Learning Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="MachineLearningAlgorithms/Regression/Regression.html"><strong aria-hidden="true">9.1.</strong> Regression</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="MachineLearningAlgorithms/Regression/LinearRegression/LinearRegression.html"><strong aria-hidden="true">9.1.1.</strong> Linear Regression</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Algorithms</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<h2><a class="header" href="#about-the-project" id="about-the-project">About the Project</a></h2>
+<p>This repository contains some of the most intriguing and awesome algorithms of daily life implemented in languages primarily in C/C++/Java/Python.</p>
+<h2><a class="header" href="#project-details" id="project-details">Project Details</a></h2>
+<p>The entire project is divided into 4 parts</p>
+<ul>
+<li>Competitive Coding Algorithms and Data Structures</li>
+<li>Security Algorithms</li>
+<li>Machine Learning Algorithms</li>
+<li>Statistical / Mathematical Algorithms</li>
+</ul>
+<h1><a class="header" href="#algebra" id="algebra">Algebra</a></h1>
+<h1><a class="header" href="#sieve-of-eratosthenes" id="sieve-of-eratosthenes">Sieve of Eratosthenes</a></h1>
+<h2><a class="header" href="#introduction-1" id="introduction-1">Introduction</a></h2>
+<p>Sieve of Eratosthenes is an algorithm that helps us find all the prime numbers in a range \([1, n]\). Initially, we take a boolean array of size \(n+1\) where the \(i\)'th index will be <code>true</code> if \(i\) is prime, and <code>false</code> otherwise. All the numbers except 0 and 1 are marked as prime at the beginning of the process.</p>
+<p>Then we loop through the numbers from 2 till \(n\) and if the number is currently marked as prime, then we add that number to our list of primes and mark all it's multiples as non-prime. At the end of the process, we will have all the prime numbers in the range in our list.</p>
+<p>Let us try to simulate the process for \(n=16\). The numbers will be placed between brackets in the diagrams if they are marked as non-prime. Initially, all numbers are marked prime except 1.</p>
+<pre><code>(1) 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+</code></pre>
+<p>Now, the loop variable, say \(i\), is at 2, which is a prime, so we mark all it's multiples as non-prime.</p>
+<pre><code>(1) 2 3 (4) 5 (6) 7 (8) 9 (10) 11 (12) 13 (14) 15 (16)
+</code></pre>
+<p>We do the same for <code>i=3</code>.</p>
+<pre><code>(1) 2 3 (4) 5 (6) 7 (8) (9) (10) 11 (12) 13 (14) (15) (16)
+</code></pre>
+<p>One important observation here is that all non-prime numbers are marked within \(\sqrt{n}\) iterations. So, we can go through the remaining numbers and add them if they are prime. So the primes in the range would be: <code>[2, 3, 5, 7, 11, 13]</code>.</p>
+<h2><a class="header" href="#implementation" id="implementation">Implementation</a></h2>
+<p><strong>C++</strong></p>
+<pre><code class="language-cpp">vector&lt;int&gt; get_primes(int n)
+{
+
+    vector&lt;int&gt; primes;
+    vector&lt;bool&gt; is_prime(n+1, true);
+    is_prime[0] = is_prime[1] = false;
+
+    for(int i=2; i&lt;=n; i++)
+    {
+        if (!is_prime[i])
+            continue;
+        primes.push_back(i);
+        for(int j=i*i; j&lt;=n; j+=i)
+            is_prime[j] = false;
+    }
+    return primes;
+}
+</code></pre>
+<p><strong>Python</strong></p>
+<pre><code class="language-py">def SieveOfEratosthenes(n):
+    isPrime = [True]*(n+1)
+    isPrime[0] = isPrime[1] = False
+    primes = []
+    for i in range(2, n+1):
+        if not isPrime[i]:continue
+        primes += [i]
+        for j in range(i*i, n+1, i):
+            isPrime[j] = False
+    return primes
+</code></pre>
+<p>Other than finding primes, the algorithm can also be used to factorise any number less than or equal to \(n\) in <strong>O(divisors)</strong> time if we simply store the smallest prime factor of each number in the array.</p>
+<h2><a class="header" href="#practice-problems" id="practice-problems">Practice Problems</a></h2>
+<ul>
+<li><a href="https://codeforces.com/contest/26/problem/A">Almost Prime</a></li>
+<li><a href="https://codeforces.com/contest/1366/problem/D">Two Divisors</a></li>
+</ul>
+<h1><a class="header" href="#fibonacci-sequence" id="fibonacci-sequence">Fibonacci Sequence</a></h1>
+<h2><a class="header" href="#introduction-2" id="introduction-2">Introduction</a></h2>
+<p>The Fibonacci sequence is defined using the following recurrence relation:
+<br />
+<br />
+\(F_n = F_{n-1} + F_{n-2}\)
+<br />
+<br />
+where, \(F_0 = 0, F_1 = 1\). This simple recurrence can be used to calculate \(n\)'th fibonacci number in \(O(n)\) time.</p>
+<h2><a class="header" href="#binets-formula" id="binets-formula">Binet's Formula</a></h2>
+<p>Binet's formula is an explicit formula used to find the nth term of the Fibonacci sequence.
+<br />
+<br />
+\(F_n = \frac{\left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n}{\sqrt{5}}\)</p>
+<p>Note that the absolute value of the second term is less than 1, so as \(n\) increases, it's value tends to 0. Thus, we can say that the value of the first term alone is nearly equal to F<sub>n</sub>. The formula also requires very high accuracy and is therefore not practical for larger values of \(n\).</p>
+<h2><a class="header" href="#matrix-form" id="matrix-form">Matrix Form</a></h2>
+<p>Consider the following relation:
+<br />
+\(\begin{pmatrix}F_{n-1} &amp; F_{n} \cr\end{pmatrix} = \begin{pmatrix}F_{n-2} &amp; F_{n-1} \cr\end{pmatrix} \cdot \begin{pmatrix}0 &amp; 1 \cr 1 &amp; 1 \cr\end{pmatrix}\)
+<br />
+<br />
+Then,
+<br />
+<br />
+\(\begin{pmatrix}F_n &amp; F_{n+1} \cr\end{pmatrix} = \begin{pmatrix}F_0 &amp; F_1 \cr\end{pmatrix} \cdot P^n\)
+<br />
+<br />
+where, \(P \equiv \begin{pmatrix}0 &amp; 1 \cr 1 &amp; 1 \cr\end{pmatrix}\)
+<br />
+<br />
+\(P^{n}\) can be calculated in \(O(\log{n})\) time using matrix exponentiation. This particular method of calculating \(n\)'th Fibonacci term is useful when \(n\) is very large, and the result is needed modulo some integer \(m\).</p>
+<p><strong>Python</strong></p>
+<pre><code class="language-py">multiply = lambda A, B, mod: [[sum(i * j for i, j in zip(row, col)) % mod for col in zip(*B)] for row in A]
+
+def f(n, m):
+    p = [[0, 1], [1, 1]]
+    result = [[1, 0], [0, 1]]
+    cur = 1
+    i = 0
+    while cur &lt;= n:
+        if n &amp; (1&lt;&lt;i):
+            result = multiply(result, p, m)
+        i += 1
+        cur *= 2
+        p = multiply(p, p, m)
+    return multiply([[0,1]], result, m)[0][0]
+</code></pre>
+<h2><a class="header" href="#practice-problems-1" id="practice-problems-1">Practice Problems</a></h2>
+<ul>
+<li><a href="https://www.spoj.com/problems/FIBOSUM/">Fibonacci Sum</a></li>
+<li><a href="https://codeforces.com/contest/718/problem/C">Sasha and Array</a></li>
+</ul>
+<h2><a class="header" href="#references" id="references">References</a></h2>
+<ul>
+<li><a href="https://cp-algorithms.com/">CP-Algorithms</a></li>
+</ul>
+<h1><a class="header" href="#linear-diophantine-equations" id="linear-diophantine-equations">Linear Diophantine Equations</a></h1>
+<h2><a class="header" href="#introduction-3" id="introduction-3">Introduction</a></h2>
+<p>A linear diophantine equation is one of the form \(ax + by = c\), where \(a\), \(b\) and \(c\) are integers known to us. A solution to the equation will exist only when \(\gcd(a,b)\) divides \(c\), where gcd denotes the greatest common divisor.</p>
+<p>To find one of the solutions, we can apply the extended Euclidean algorithm to find the gcd of \(a\) and \(b\), and two numbers \(x_{g}\) and \(y_{g}\) such that \(ax_{g} + by_{g} = g\).</p>
+<p>The implementation is as follows:</p>
+<p><strong>C++</strong></p>
+<pre><code class="language-cpp">pair&lt;int, int&gt; solve(int a, int b, int c)
+{
+    int m1=1, m2=0, n1=0, n2=1;
+    while (a % b)
+    {
+        int quotient = a / b;
+        int remainder = a % b;
+        int aux1 = m1-(m2*quotient);
+        int aux2 = n1-(n2*quotient);
+        a = b;
+        b = remainder;
+        m1 = m2;
+        n1 = n2;
+        m2 = aux1;
+        n2 = aux2;
+    }
+    return make_pair(m2*c,n2*c);
+}
+</code></pre>
+<p><strong>Python</strong></p>
+<pre><code class="language-py">def solve(a,b,c):
+    m1, m2, n1, n2 = 1, 0, 0, 1
+    while a % b:
+        quotient = a // b
+        a, b = b, a % b
+        m1, n1, m2, n2 = m2, n2, m1-(m2*quotient), n1-(n2*quotient)
+    return m2*c,n2*c
+</code></pre>
+<p>From one solution, say \((x_0, y_0)\), we can obtain all other solutions by adding \(\frac{b}{g}\) to \(x_0\) and subtracting \(\frac{a}{g}\) from \(y_0\). This gives us a general solution of the form:
+<br />
+\(x = x_0 + k \cdot \frac{b}{g}\), 
+<br />
+\(y = y_0 - k \cdot \frac{a}{g}\)</p>
+<h2><a class="header" href="#practice-problems-2" id="practice-problems-2">Practice Problems</a></h2>
+<ul>
+<li><a href="https://www.spoj.com/problems/CEQU/">Crucial Equations</a></li>
+</ul>
+<h2><a class="header" href="#references-1" id="references-1">References</a></h2>
+<ul>
+<li><a href="https://cp-algorithms.com/">CP-Algorithms</a></li>
+</ul>
+<h1><a class="header" href="#eulers-totient-function" id="eulers-totient-function">Euler's Totient Function</a></h1>
+<h2><a class="header" href="#introduction-4" id="introduction-4">Introduction</a></h2>
+<p>Euler's Totient Function, denoted by \(\phi(n)\), counts the number of integers in the range \([1, n]\) that are co-prime to \(n\). Two numbers are said to be co-prime if their greatest common divisor is equal to 1. Some important properties of the function are:</p>
+<ol>
+<li>
+<p>For any prime \(n\), it is trivial to see that 
+<br />
+\(\phi(n) = n-1\)</p>
+</li>
+<li>
+<p>For two co-prime integers a and b, from the Chinese Remainder Theorem, it follows that 
+<br />
+\(\phi(a b) = \phi(a) \cdot \phi(b)\)</p>
+</li>
+<li>
+<p>For any prime p,
+<br />
+\(\phi(p^k) = p^k - p^{k-1}\)
+<br />
+This holds true because all numbers except the multiples of p will be co-prime to p<sup>k</sup>, and since there are exactly p<sup>k-1</sup> multiples of p, we subtract it from the result.</p>
+</li>
+</ol>
+<p>Using the above results, we can calculate the value of the function for any integer n in O(√n) time by using factorization.</p>
+<h2><a class="header" href="#implementation-1" id="implementation-1">Implementation</a></h2>
+<p><strong>C++</strong></p>
+<pre><code class="language-cpp">int phi(int n)
+{
+    int result = n;
+    for(int i=2; i*i&lt;=n; i++)
+    {
+        if (n % i == 0)
+        {
+            result -= result/i;
+            while(n % i == 0)
+                n /= i;
+        }
+    }
+    if (n != 1)
+        result -= result/n;
+    return result;
+}
+</code></pre>
+<p><strong>Python</strong></p>
+<pre><code class="language-py">def phi(n):
+    result = n
+    i = 2
+    while i*i &lt;= n:
+        if n % i == 0:
+            result -= result//i
+            while n % i == 0:
+                n //= i
+        i += 1
+    if n != 1:
+        result -= result//n
+    return result
+</code></pre>
+<p>If we require the totient of all the numbers upto n, then finding them using factorization will be inefficient. In that case, we can use an approach similar to the Sieve of Eratosthenes, by calculating all the prime numbers and updating the results of the multiples of each prime. The algorithm will have similar complexity as sieve.</p>
+<p><strong>C++</strong></p>
+<pre><code class="language-cpp">vector&lt;int&gt; get_phi(int n)
+{
+
+    vector&lt;int&gt; result(n+1);
+    for(int i=0; i&lt;=n; i++)
+        result[i] = i;
+    for (int i = 2; i &lt;= n; i++)
+    {
+        if (result[i] == i)
+        {
+            for (int j = i; j &lt;= n; j += i)
+                result[j] -= result[j] / i;
+        }
+    }
+    return result;
+}
+</code></pre>
+<p><strong>Python</strong></p>
+<pre><code class="language-py">def get_phi(n):
+    result = [*range(n+1)]
+    for i in range(2, n+1):
+        if result[i] == i:
+            for j in range(i, n+1, i):
+                result[j] -= result[j] // i
+    return result
+</code></pre>
+<h2><a class="header" href="#practice-problems-3" id="practice-problems-3">Practice Problems</a></h2>
+<ul>
+<li><a href="https://www.spoj.com/problems/LCMSUM/">LCM Sum</a></li>
+<li><a href="https://www.spoj.com/problems/NAJPWG/">Playing with GCD</a></li>
+</ul>
+<h2><a class="header" href="#references-2" id="references-2">References</a></h2>
+<ul>
+<li><a href="https://cp-algorithms.com/">CP-Algorithms</a></li>
+</ul>
+<h1><a class="header" href="#modular-multiplicative-inverse" id="modular-multiplicative-inverse">Modular Multiplicative Inverse</a></h1>
+<h2><a class="header" href="#introduction-5" id="introduction-5">Introduction</a></h2>
+<p>A modular multiplicative inverse of an integer \(a\) is some integer \(x\) such that, for some modulo \(m\),
+<br />
+\(a \cdot x \equiv 1 \mod m\)
+<br />
+Here, \(x\) can also be denoted using \(a^{-1}\). Note that the modular inverse does not necessarily exist. It only exists if \(\gcd(a, m) = 1\).</p>
+<h2><a class="header" href="#calculating-the-modular-inverse" id="calculating-the-modular-inverse">Calculating the modular inverse</a></h2>
+<p>From the Euler's theorem, if \(a\) and \(m\) are relatively prime,
+<br />
+<br />
+\(a^{\phi (m)} \equiv 1 \mod m\)
+<br />
+<br />
+Multiplying both sides by \(a^{-1}\), we get:
+<br />
+<br />
+\(a ^ {\phi (m) - 1} \equiv a ^{-1} \mod m\) ...(1)
+<br />
+<br />
+Now if the modulus is prime, from Fermat's little theorem, we get:
+<br />
+<br />
+\(a^{m - 1} \equiv 1 \mod m\)
+<br />
+<br />
+Multiplying both sides by a<sup>-1</sup>, we get:
+<br />
+<br />
+\(a ^ {m - 2} \equiv a ^ {-1} \mod m\) ...(2)
+<br />
+<br />
+Using results (1) and (2), and using binary exponentiation, the modular inverse can be calculated in \(O(\log{m})\) time for prime modulus, and in \(O(\sqrt{m} + \log{m})\) time otherwise, since calculating totient takes \(O(\sqrt{m})\) time.</p>
+<p>Now say we need to calculate the inverse modulo some prime \(m\) for all integers in the range \([1, n]\).</p>
+<p>We have:
+<br />
+<br />
+\(m \bmod i = m -  \left\lfloor \frac{m}{i} \right\rfloor \cdot i\)
+<br />
+<br />
+Taking modulo \(m\) both sides, we get:
+<br />
+<br />
+\(m \bmod i \equiv - \left\lfloor \frac{m}{i} \right\rfloor \cdot i \mod m\)
+<br />
+<br />
+Multiplying both sides by i<sup>-1</sup> . (m mod i)<sup>-1</sup> and simplifying, we have:
+<br />
+<br />
+\(i^{-1} \equiv -\left\lfloor \frac{m}{i} \right\rfloor \cdot (m \bmod i)^{-1} \mod m\) ...(3)
+<br />
+<br />
+We can use this equation to calculate \(i^{-1}\) for all \(i &lt; m\).</p>
+<pre><code class="language-cpp">inv[i] = 1;
+for(int i=2; i&lt;=n; i++)
+ inv[i] = m - (m/i) * inv[m%i] % m;
+</code></pre>
+<p>Thus, we can calculate the inverse of all numbers upto \(n\) in \(O(n)\) time.</p>
+<h2><a class="header" href="#practice-problems-4" id="practice-problems-4">Practice Problems</a></h2>
+<ul>
+<li><a href="https://codeforces.com/contest/57/problem/C">Array</a></li>
+<li><a href="https://codeforces.com/contest/1452/problem/D">Radio Towers</a></li>
+</ul>
+<h2><a class="header" href="#references-3" id="references-3">References</a></h2>
+<ul>
+<li><a href="https://cp-algorithms.com/">CP-Algorithms</a></li>
+</ul>
+<h1><a class="header" href="#linear-search" id="linear-search">Linear Search</a></h1>
+<p>Linear search is the simplest searching algorithm that searches for an element in a list(any linear data-structure) in sequential order. We start at one end and check every element until the desired element is not found.
+Works on both sorted and un-sorted array.</p>
+<h2><a class="header" href="#problem-statement" id="problem-statement">Problem Statement</a></h2>
+<p>Given an array <code>arr[]</code> of n elements, write a function to search a given element <code>x</code> in <code>arr[]</code>.(Array indexing 0-based, i.e,  <code>[0,1,...,n-1]</code> where n is the size of the array). If <code>x</code> is not present in the array return <code>-1</code>.</p>
+<h2><a class="header" href="#solution" id="solution">Solution</a></h2>
+<p>We linearly traverse the array <code>arr[]</code> from frist to last postion, i.e, index <code>0</code> to index <code>n-1</code> where <code>n</code> is the size of the given array, and if we find the required element <code>x</code> return the index of that element. If the required element makes multiple occurances, the index value of the first occurance will be returned.</p>
+<pre><code class="language-cpp">int main(){
+    int n;
+    cin&gt;&gt;n; // input the size of required array
+    int arr[n]; // make an array of size n
+    for(int i=0; i&lt;n; i++)cin&gt;&gt;arr[i]; // input the array
+    int x; 
+    cin&gt;&gt;x; // the value to be searched
+    int pos=-1; // initialize to -1 so that non-occurance of x can be checked
+    for(int i=0; i&lt;n; i++){
+        if(arr[i]==x){
+            cout&lt;&lt;x&lt;&lt;&quot;Occurs at index &quot;&lt;&lt;i;
+            pos=i;
+            return 0;
+        }
+    }
+    if(pos==-1)cout&lt;&lt;&quot;Not present in array&quot;;
+}
+</code></pre>
+<h2><a class="header" href="#time-complexity" id="time-complexity">Time Complexity</a></h2>
+<blockquote>
+<p><code>O(n)</code> in the worst case scenario as we have to traverse the whole array from start to end.</p>
+</blockquote>
+<h2><a class="header" href="#practice-problems-5" id="practice-problems-5">Practice Problems</a></h2>
+<p><a href="https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1/?category%5B%5D=Searching&amp;page=1&amp;query=category%5B%5DSearchingpage1">Find number of occurances</a></p>
+<p><a href="https://practice.geeksforgeeks.org/problems/doubling-the-value4859/1/?category%5B%5D=Searching&amp;page=1&amp;query=category%5B%5DSearchingpage1">Doubling the value</a></p>
+<p><a href="https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1/?category%5B%5D=Searching&amp;page=2&amp;query=category%5B%5DSearchingpage2">Search in a matrix</a></p>
+<h1><a class="header" href="#linear-search-1" id="linear-search-1">Linear Search</a></h1>
+<p>Linear search is the simplest searching algorithm that searches for an element in a list(any linear data-structure) in sequential order. We start at one end and check every element until the desired element is not found.
+Works on both sorted and un-sorted array.</p>
+<h2><a class="header" href="#problem-statement-1" id="problem-statement-1">Problem Statement</a></h2>
+<p>Given an array <code>arr[]</code> of n elements, write a function to search a given element <code>x</code> in <code>arr[]</code>.(Array indexing 0-based, i.e,  <code>[0,1,...,n-1]</code> where n is the size of the array). If <code>x</code> is not present in the array return <code>-1</code>.</p>
+<h2><a class="header" href="#solution-1" id="solution-1">Solution</a></h2>
+<p>We linearly traverse the array <code>arr[]</code> from frist to last postion, i.e, index <code>0</code> to index <code>n-1</code> where <code>n</code> is the size of the given array, and if we find the required element <code>x</code> return the index of that element. If the required element makes multiple occurances, the index value of the first occurance will be returned.</p>
+<pre><code class="language-cpp">int main(){
+    int n;
+    cin&gt;&gt;n; // input the size of required array
+    int arr[n]; // make an array of size n
+    for(int i=0; i&lt;n; i++)cin&gt;&gt;arr[i]; // input the array
+    int x; 
+    cin&gt;&gt;x; // the value to be searched
+    int pos=-1; // initialize to -1 so that non-occurance of x can be checked
+    for(int i=0; i&lt;n; i++){
+        if(arr[i]==x){
+            cout&lt;&lt;x&lt;&lt;&quot;Occurs at index &quot;&lt;&lt;i;
+            pos=i;
+            return 0;
+        }
+    }
+    if(pos==-1)cout&lt;&lt;&quot;Not present in array&quot;;
+}
+</code></pre>
+<h2><a class="header" href="#time-complexity-1" id="time-complexity-1">Time Complexity</a></h2>
+<blockquote>
+<p><code>O(n)</code> in the worst case scenario as we have to traverse the whole array from start to end.</p>
+</blockquote>
+<h2><a class="header" href="#practice-problems-6" id="practice-problems-6">Practice Problems</a></h2>
+<p><a href="https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1/?category%5B%5D=Searching&amp;page=1&amp;query=category%5B%5DSearchingpage1">Find number of occurances</a></p>
+<p><a href="https://practice.geeksforgeeks.org/problems/doubling-the-value4859/1/?category%5B%5D=Searching&amp;page=1&amp;query=category%5B%5DSearchingpage1">Doubling the value</a></p>
+<p><a href="https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1/?category%5B%5D=Searching&amp;page=2&amp;query=category%5B%5DSearchingpage2">Search in a matrix</a></p>
+<h1><a class="header" href="#binary-search" id="binary-search">Binary Search</a></h1>
+<p>Binary search is a fast search algorithm with run-time complexity of <code>Ο(log n)</code>. This search algorithm works on the principle of <code>divide and conquer</code>. For this algorithm to work properly, the data collection should be in the <code>sorted form</code>.</p>
+<p>Binary search looks for a particular item by comparing the middle most item of the collection. If a match occurs, then the index of item is returned. If the middle item is greater than the item, then the item is searched in the sub-array to the left of the middle item. Otherwise, the item is searched for in the sub-array to the right of the middle item. This process continues on the sub-array as well until the size of the subarray reduces to zero.</p>
+<h2><a class="header" href="#problem-statement-2" id="problem-statement-2">Problem Statement</a></h2>
+<p>Given an array <code>arr[]</code> of n elements in <code>sorted</code> order, write a function to search a given element <code>x</code> in <code>arr[]</code>.(Array indexing 0-based, i.e,  <code>[0,1,...,n-1]</code> where n is the size of the array). If <code>x</code> is not present in the array return <code>-1</code>.</p>
+<h2><a class="header" href="#solution-2" id="solution-2">Solution</a></h2>
+<p>Let the given array be</p>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_0.jpg" alt="img" /></p>
+<p>and the number to be searched be 31.</p>
+<p>First determine the left and right ends of the array </p>
+<blockquote>
+<p>left = 0 and right = n-1 (here n = 10, the size of array).
+Thus middle = left + (right - left) / 2 .</p>
+</blockquote>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_1.jpg" alt="img" /></p>
+<p>Now, compare the arr[mid] value with x (value to be found). 
+If <code>arr[mid] &gt; x</code>, then we can say x lies to the left of mid. Else if <code>arr[mid] &lt; x</code>, then x lies to the right of mid, else if <code>arr[mid] == x</code> we have found our ans.</p>
+<blockquote>
+<p>Here arr[mid] &lt; 31, thus we change our left = mid+1 and mid = left + (right - left) / 2 </p>
+</blockquote>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_3.jpg" alt="img" /></p>
+<blockquote>
+<p>Here arr[mid] &gt; 31, thus we change our right = mid-1 and mid = left + (right - left) / 2</p>
+</blockquote>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_5.jpg" alt="img" /></p>
+<blockquote>
+<p>Finally arr[mid] = 31, thus the required pos is mid, where mid = 5</p>
+</blockquote>
+<p><img src="https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_6.jpg" alt="img" /></p>
+<pre><code class="language-cpp">int binarySearch(int arr[],int n, int x){
+    int left=0, right=n-1;
+    while(left&lt;right){
+        int mid=left+(right-left)/2;
+        if(arr[mid]&gt;x){
+            right=mid-1;
+        }
+        else if(arr[mid]&lt;x){
+            left=mid+1;
+        }
+        else if(arr[mid]==x){
+            return mid;
+        }
+    }
+    return -1; // if x is not present in the array
+}
+</code></pre>
+<h2><a class="header" href="#time-complexity-2" id="time-complexity-2">Time Complexity</a></h2>
+<p>As mentioned earlier, Binary Search is the fastest algorithm with the time complexity of O(log<sub>2</sub>n).</p>
+<p>As we keep dividing the array to half it's current size at each iteration, thus the size of the array decreases logarithmically. </p>
+<p><strong>At 1st iteration</strong></p>
+<p>length = n</p>
+<p><strong>At 2nd iteration</strong></p>
+<p>length = \( \frac{x}{2} \)</p>
+<p><strong>At 3rd iteration</strong></p>
+<p>length = \(\frac{x}{2}*\frac{1}{2} = \frac{x}{4}\)</p>
+<p>.
+.
+.</p>
+<p><strong>At k-th iteration</strong></p>
+<p>length = \( \frac{n}{2^{k-1}} \)</p>
+<p>So, maximum number of interations will be \( \log_2{n} \)</p>
+<h2><a class="header" href="#practice-probelms" id="practice-probelms">Practice Probelms</a></h2>
+<p><a href="https://practice.geeksforgeeks.org/problems/binary-search/1">Binary Search</a></p>
+<p><a href="https://codeforces.com/problemset/problem/706/B">Intresting Drink</a></p>
+<p><a href="https://codeforces.com/problemset/problem/279/B">Books</a></p>
+<h2><a class="header" href="#know-these" id="know-these">Know These</a></h2>
+<h3><a class="header" href="#upper_-bound" id="upper_-bound">upper_ bound:</a></h3>
+<p>In-built C++ function, which takes an array or a vector and a value ( say  <code>x</code> ) as input and returns a iterator that points to a value <strong>just greater</strong> than the provided value. ( works on a sorted array / vector ).
+If there are multiple such values, the one that makes first occurance is returned.</p>
+<pre><code class="language-cpp">vector&lt;int&gt; v;
+int x;
+int pos = upper_bound( v.begin() , v.end(), x) - v.begin();
+</code></pre>
+<h3><a class="header" href="#lower_bound" id="lower_bound">lower_bound:</a></h3>
+<p>In-built C++ function, which takes an array or a vector and a value ( say  <code>x</code> ) as input and returns an iterator that points to the value <strong>not less</strong> than the provided value. ( works on a sorted array / vector ). If there are multiple such values, the one that makes first occurance is returned.</p>
+<pre><code class="language-cpp">vector&lt;int&gt; v;
+int x;
+int pos = lower_bound( v.begin() , v.end() , x) - v.begin();
+</code></pre>
+<p>If no such value is available, both the functions return an iterator pointing to the end of the array / vector .</p>
+<h1><a class="header" href="#binary-search-vs-linear-search" id="binary-search-vs-linear-search">Binary Search VS Linear Search</a></h1>
+<p>As we can judge from the time complexities, Binary search is the go to method for a sorted array.</p>
+<p>The GIF belows visualises Binary-Search and Linear-Search side by side on the same array. Hope, this gives you an idea of the algorithms efficiency.</p>
+<p><img src="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif" alt="Alt Text" /></p>
+<h1><a class="header" href="#ternary-search" id="ternary-search">Ternary Search</a></h1>
+<p>It is a divide-and-conquer algorithm, similar to binary search, only that we divide the array in three parts using mid1 and mid2, and the array should be sorted. </p>
+<h2><a class="header" href="#problem-statement-3" id="problem-statement-3">Problem Statement</a></h2>
+<p>Given an array <code>arr[]</code> of n elements in <code>sorted</code> order, write a function to search a given element <code>x</code> in <code>arr[]</code>.(Array indexing 0-based, i.e,  <code>[0,1,...,n-1]</code> where n is the size of the array). If <code>x</code> is not present in the array return <code>-1</code>.</p>
+<h2><a class="header" href="#solution-3" id="solution-3">Solution</a></h2>
+<p>Let the given array be </p>
+<blockquote>
+<p>1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    10</p>
+</blockquote>
+<p>and the value to be searched be   <code>x = 6</code></p>
+<p>First determine the left and right ends of the array</p>
+<blockquote>
+<p>left = 0, right = 9 [n(size of array) - 1]</p>
+<p>Thus, mid1 = left + ( right - left ) / 3, and</p>
+<p>mid2 = mid1 + ( right - left ) / 3</p>
+<p>left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mid2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right</p> 
+\/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/
+<p>1 &nbsp;&nbsp; | &nbsp;&nbsp; 2 &nbsp;&nbsp; | &nbsp;&nbsp; 3 &nbsp;&nbsp; | &nbsp;&nbsp; 4 &nbsp;&nbsp; | &nbsp;&nbsp; 5 &nbsp;&nbsp; | &nbsp;&nbsp; 6 &nbsp;&nbsp; | &nbsp;&nbsp; 7 &nbsp;&nbsp; | &nbsp;&nbsp; 8 &nbsp;&nbsp; | &nbsp;&nbsp; 9 &nbsp;&nbsp; | &nbsp;&nbsp; 10</p>
+</blockquote>
+<p>As, <code>x &gt; arr[mid1]</code> and <code>x &lt; arr[mid2]</code></p>
+<blockquote>
+<p>left = mid1 (4), <p>right = mid2 (7),</p><p> mid1 = 5,</p> <p> mid2 = 6 </p></p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left&nbsp;&nbsp;&nbsp;mid1&nbsp;&nbsp;&nbsp;mid2&nbsp;&nbsp;&nbsp;right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p>1 &nbsp;&nbsp; | &nbsp;&nbsp; 2 &nbsp;&nbsp; | &nbsp;&nbsp; 3 &nbsp;&nbsp; | &nbsp;&nbsp; 4 &nbsp;&nbsp; | &nbsp;&nbsp; 5 &nbsp;&nbsp; | &nbsp;&nbsp; 6 &nbsp;&nbsp; | &nbsp;&nbsp; 7 &nbsp;&nbsp; | &nbsp;&nbsp; 8 &nbsp;&nbsp; | &nbsp;&nbsp; 9 &nbsp;&nbsp; | &nbsp;&nbsp; 10</p>
+</blockquote>
+<p>We see, <code>arr[mid2] = x</code>. Thus, required <code>pos = mid2</code>.</p>
+<pre><code class="language-cpp(Recursive)">int ternarySearch(int arr[], int n,int l,int r int x){
+    if(right &gt; left){
+        int mid1 = left + (right - left) / 3;
+        int mid2 = mid1 + (right - left) / 3;
+        // check if x is found
+        if(arr[mid1] == x){
+            retrun mid1;
+        }
+        if(arr[mid2] == x){
+            retrun mid2;
+        }
+        if(x &lt; arr[mid1]){
+            // x lies between l and mid1
+            return ternarySearch(arr, n, l, mid1-1, x);
+        }
+        else if(x &gt; arr[mid2]){
+            // x lies between mid2 nad r
+            retrun ternarySearch(arr, n, mid2+1, r, x);
+        }
+        else{
+            // x lies between mid1 and mid2
+            return ternarySearch(arr, n, mid1+1, mid2-1, x);
+        }
+    }
+    // x not found
+    return -1;
+}
+</code></pre>
+<h2><a class="header" href="#time-complexity-3" id="time-complexity-3">Time Complexity</a></h2>
+<p>Ternary Search is faster than Binary Search, as it also works in logarithamic complexity but the base is 3, O(log<sub>3</sub>n). But it is not as widely used as binary search.</p>
+<p>As we keep dividing the array to one-third it's current size at each iteration, thus the size of the array decreases logarithmically. </p>
+<p><strong>At 1st iteration</strong></p>
+<p>length = n</p>
+<p><strong>At 2nd iteration</strong></p>
+<p>length = \( \frac{x}{3} \)</p>
+<p><strong>At 3rd iteration</strong></p>
+<p>length = \(\frac{x}{3}*\frac{1}{3} = \frac{x}{9}\)</p>
+<p>.
+.
+.</p>
+<p><strong>At k-th iteration</strong></p>
+<p>length = \( \frac{n}{3^{k-1}} \)</p>
+<p>So, maximum number of interations will be \( \log_3{n} \)</p>
+<h2><a class="header" href="#practice-problem" id="practice-problem">Practice Problem</a></h2>
+<p><a href="https://codeforces.com/problemset/problem/578/C">Weakness and Poorness</a></p>
+<p><a href="https://www.codechef.com/problems/AMCS03">Race Time!</a></p>
+<p><a href="https://codeforces.com/problemset/problem/439/D">Devu and his Brother</a></p>
+<p><a href="https://www.codechef.com/problems/ICM2003">This is JEE</a></p>
+<h1><a class="header" href="#sorting-algorithms" id="sorting-algorithms">Sorting Algorithms</a></h1>
+<p>A Sorting Algorithm is used to rearrange a given array or list elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of element in the respective data structure.</p>
+<hr>
+<h2><a class="header" href="#topics-covered" id="topics-covered">Topics Covered</a></h2>
+<ul>
+<li><a href="SortingAlgorithms/./BubbleSort.html">Bubble Sort</a></li>
+<li><a href="SortingAlgorithms/./QuickSort.html">Quick Sort</a></li>
+<li><a href="SortingAlgorithms/./CountSort.html">Count Sort</a></li>
+<li><a href="SortingAlgorithms/./BucketSort.html">Bucket Sort</a></li>
+<li><a href="SortingAlgorithms/./HeapSort.html">Heap Sort</a></li>
+<li><a href="SortingAlgorithms/./RadixSort.html">Radix Sort</a></li>
+<li><a href="SortingAlgorithms/./InsertionSort/insertion.html">Insertion Sort</a></li>
+<li><a href="SortingAlgorithms/./ShellSort.html">Shell Sort</a></li>
+<li><a href="SortingAlgorithms/./MergeSort/merge.html">Merge Sort</a></li>
+<li><a href="SortingAlgorithms/./SelectionSort/selection.html">SelectionSort</a></li>
+</ul>
+<h1><a class="header" href="#bubble-sort" id="bubble-sort">Bubble Sort</a></h1>
+<h2><a class="header" href="#example-problem" id="example-problem">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Bubble Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion" id="discussion">Discussion</a></h2>
+<p>Bubble Sort is one of the simplest sorting algorithms that repeatedly swaps the adjacent elements if they are in wrong order.</p>
+<h2><a class="header" href="#illustration" id="illustration">Illustration</a></h2>
+<img src="https://raw.githubusercontent.com/Ahel2000/StarBuzz/master/bubble-sort.png"/>
+<h2><a class="header" href="#code-for-bubble-sort" id="code-for-bubble-sort">Code for Bubble Sort</a></h2>
+<pre><code class="language-java">
+void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i &lt; n-1; i++)
+            for (int j = 0; j &lt; n-i-1; j++)
+                if (arr[j] &gt; arr[j+1]) //if ordering is wrong
+                {   int temp = arr[j]; //then swap a[j] and a[j+1]
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+
+</code></pre>
+<h1><a class="header" href="#quick-sort" id="quick-sort">Quick Sort</a></h1>
+<h2><a class="header" href="#example-problem-1" id="example-problem-1">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Quick Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-1" id="discussion-1">Discussion</a></h2>
+<p>So the basic idea behind Quick Sort is to take an element generally called the <strong>pivot</strong> and place it at such a place such that it is in it's sorted position.</p>
+<p>Look at the following list of numbers:</p>
+<pre><code>10 36 15 23 56 12
+</code></pre>
+<p>Can you guess the number at the sorted position ? Yes it can be identified by just at glance , that is 10.</p>
+<p>Now Let's take another example:</p>
+<pre><code>40 36 15 50 75 62 57
+</code></pre>
+<p>Now we can see that 50 is at it's sorted poition by just a glance.
+This is because all the elements before it is less than 50 and all elemnts after it is greater than 50.</p>
+<p>So , the main idea is to select a <strong>pivot</strong> and place it to it's sorted position.</p>
+<hr>
+<h2><a class="header" href="#working-of-the-algorithm" id="working-of-the-algorithm">Working of the Algorithm</a></h2>
+<p>Let us take an example with the list of integers</p>
+<pre><code>50 70 60 90 40 80 10 20 30
+</code></pre>
+<p>Let us take the first element to be pivot that is 50.</p>
+<p>Take two pointers <code>i , j</code> . Initially place <code>i</code> at the pivot i.e. index 0 and <code>j</code> at position n and keep a number (say infinite) at index n.</p>
+<p>So, it looks like :</p>
+<pre><code>50 70 60 90 40 80 10 20 30 INT_MAX
+i                          j
+</code></pre>
+<p>Now iterate i towards right and j towards left . Stop when <code>arr[i]&gt;pivot</code> and <code>arr[j]&lt;=pivot</code> . If <code>i &lt; j</code> swap the values . Continue the process until <code>i&gt;j</code> . Whwn this case arrives swap the <strong>pivot</strong> with <code>arr[j]</code>. </p>
+<h3><a class="header" href="#illustration-1" id="illustration-1">Illustration</a></h3>
+<pre><code>50 70 60 90 40 80 10 20 30 INT_MAX
+   i                    j
+
+// Here arr[i]&gt;=50 and arr[j]&lt;50 , so we swap them and move the pointers since i&lt;j.
+
+50 30 60 90 40 80 10 20 70 INT_MAX
+      i              j
+
+// Swapping again , and moving pointers.
+
+50 30 20 90 40 80 10 60 70 INT_MAX
+         i        j
+
+// Swapping again , and moving pointers.
+
+50 30 20 10 40 80 90 60 70 INT_MAX
+            j  i
+
+// Now we see j&lt;i , so we stop the loop and swap arr[j] with pivot.
+
+40 30 20 10 50 80 90 60 70 INT_MAX
+            __
+</code></pre>
+<p>Now , we see that all elements before 50 are lesser than 50 and all elemnts after 50 are greater than 50. </p>
+<p>Now apply this partitioning on both sides of 50 and hence, we will get our sorted array.</p>
+<hr>
+<h2><a class="header" href="#code" id="code">Code</a></h2>
+<h3><a class="header" href="#code-for-partition" id="code-for-partition">Code For Partition</a></h3>
+<pre><code class="language-cpp">int partition(int a[],int l ,int h)
+{
+    int pivot = a[l]; // choosing left-most elemnt to be pivot
+    int i=l,j=h;    // setting pointers i and j
+
+    //looping through the process until we get j&lt;i
+    do{
+        // iterating i until we get a number greater than pivot
+        while(a[++i]&lt;=pivot);
+
+        // iterating j until we get a number greater than pivot
+        while(a[--j]&gt;pivot);
+
+        //swapping arr[i] and arr[j]
+        if(i&lt;j){
+            swap(a[i],a[j]);
+        }
+        
+    }while(i&lt;j);
+
+    // swapping pivot
+    swap(a[j],a[l]);
+
+    //return partition point
+    return j;
+}
+</code></pre>
+<h3><a class="header" href="#code-for-quick-sort" id="code-for-quick-sort">Code for Quick Sort.</a></h3>
+<pre><code class="language-cpp">void QuickSort(int a[],int l,int h)
+{
+    int j;
+    if(l&lt;h)
+    {
+        j=partition(a,l,h); // taking the partition point
+        QuickSort(a,l,j);   // Sorting the left side
+        QuickSort(a,j+1,h); // Sorting right side
+    }
+}
+</code></pre>
+<hr>
+<h2><a class="header" href="#time-complexity-4" id="time-complexity-4">Time Complexity</a></h2>
+<table><thead><tr><th align="center">Worst Case</th><th align="center">Best Case</th><th align="center">Average Case</th></tr></thead><tbody>
+<tr><td align="center">O ( n<sup>2</sup> )</td><td align="center">O ( nlog<sub>2</sub>n )</td><td align="center">O ( nlog<sub>2</sub>n )</td></tr>
+</tbody></table>
+<p><strong>Worst Case</strong> : The worst case occurs when the partition process always picks greatest or smallest element as pivot. If we consider above partition strategy where first element is always picked as pivot, the worst case would occur when the array is already sorted in increasing or decreasing order.</p>
+<p><strong>Best Case</strong>: The best case occurs when the partition process always picks the middle element as pivot. </p>
+<hr>
+<p>Other Resources : <a href="https://www.geeksforgeeks.org/quick-sort/">GFG Blog</a></p>
+<h1><a class="header" href="#count-sort" id="count-sort">Count Sort</a></h1>
+<h2><a class="header" href="#example-problem-2" id="example-problem-2">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array with the help of Count Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-2" id="discussion-2">Discussion</a></h2>
+<p>Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values. Then doing some arithmetic to calculate the position of each object in the output sequence.</p>
+<p>Take a count array of size <code> max_element + 1</code> and initialise the array with 0 . Now iterate through the initial array and for each element x increase the value of count array at index x by 1.</p>
+<p>But this method won't work for negative integers .</p>
+<p>So we take a count array of size <code>max_element - min_element + 1</code> and initialize with 0. Now iterate through the initial array and for each element x increase the value of count array at index <code>x - min_element</code> by 1.</p>
+<p>Now Iterate through the count array and if value at the <code>index + min_element</code> is greater than 0 keep on adding the index value to the array , and decrement the value of the index by 1.</p>
+<hr>
+<h2><a class="header" href="#working-of-the-algorithm-1" id="working-of-the-algorithm-1">Working of the Algorithm</a></h2>
+<pre><code>Consider array = [1 , 3 , -5 , 3 , 4 , -2 , 0]
+
+Here max_element = -5 and min_element = 4
+
+So, Create an array of size (4 - (-5) + 1) = 10 and initialise with 0.
+
+count_array = [ 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ]
+idx_values-&gt;    0   1   2   3   4   5   6   7   8   9
+
+After the iteration , count array becomes -&gt;
+
+count_array = [ 1 , 0 , 0 , 1 , 0 , 1 , 1 , 0 , 2 , 1 ]
+idx_values-&gt;    0   1   2   3   4   5   6   7   8   9
+
+The Sorted Array becomes : [-5 , -2 , 0 , 1 , 3 , 3 , 4]
+</code></pre>
+<hr>
+<h2><a class="header" href="#code-1" id="code-1">Code</a></h2>
+<h3><a class="header" href="#code-for-count-sort" id="code-for-count-sort">Code For Count Sort</a></h3>
+<pre><code class="language-cpp">void CountSort(int a[],int n)
+{
+    int max_element = -INT_MAX , min_element = INT_MAX ;
+
+    // for finding the max_element in the array
+    for(int i=0;i&lt;n;i++)
+        max_element = max(max_element , a[i]);
+    
+    // for finding the min_element in the array
+    for(int i=0;i&lt;n;i++)
+        min_element = min(min_element , a[i]);
+
+    // initisalizing a count vector of size max_element - min_element + 1
+    vector &lt;int&gt; count(max_element - min_element +1 , 0);
+
+    // setting count vector according to the algorithm
+    for(int i=0;i&lt;n;i++)
+        count[a[i] - min_element]++;
+    
+    // updating the actual array
+    int j = 0,i=0;
+    while(i&lt;max_element - min_element +1)
+    {
+        if(count[i] == 0)
+            i++;
+        else
+        {
+            a[j] = min_element + i;
+            count[i]--;
+            j++;
+        }
+        
+    }
+}
+</code></pre>
+<hr>
+<h2><a class="header" href="#time-complexity-5" id="time-complexity-5">Time Complexity</a></h2>
+<p><strong>Time Complexity</strong>: O(n+k) where n is the number of elements in input array and k is the range of input. </p>
+<p><strong>Space Complexity</strong>: Algorithm takes extra space of O(k).</p>
+<hr>
+<h2><a class="header" href="#important" id="important">Important</a></h2>
+<p>Counting sort is efficient if the range of input data is not significantly greater than the number of objects to be sorted. Consider the situation where the input sequence is between range 1 to 10K and the data is 10, 5, 10K, 5K. </p>
+<hr>
+<p>Other Resources : <a href="https://www.geeksforgeeks.org/counting-sort/">GFG Blog</a></p>
+<h1><a class="header" href="#bucket-sort" id="bucket-sort">Bucket Sort</a></h1>
+<h2><a class="header" href="#example-problem-3" id="example-problem-3">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array with the help of Bucket Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-3" id="discussion-3">Discussion</a></h2>
+<p>Bucket Sort is a sorting technique that sorts the elements by first dividing the elements into several groups called buckets. The elements inside each bucket are sorted using any of the suitable sorting algorithms or recursively calling the same algorithm.</p>
+<hr>
+<h2><a class="header" href="#working-of-the-algorithm-2" id="working-of-the-algorithm-2">Working of the Algorithm</a></h2>
+<p>Several buckets are created. Each bucket is filled with a specific range of elements. The elements inside the bucket are sorted using any other algorithm. Finally, the elements of the bucket are gathered to get the sorted array.</p>
+<p>The process of bucket sort can be understood as a scatter-gather approach. The elements are first scattered into buckets then the elements of buckets are sorted. Finally, the elements are gathered in order.</p>
+<p><img src="https://cdn.programiz.com/sites/tutorial2program/files/Bucket_2.png" alt="Bucket Sort" /></p>
+<h2><a class="header" href="#illustration-2" id="illustration-2">Illustration</a></h2>
+<p>Let's Sort an array of decimal numbers in th range 0 to 1.</p>
+<pre><code>Input array : 0.42 0.32 0.23 0.52 0.25 0.47 0.51
+
+Create an array of size 10. Each slot of this array is used as a bucket for storing elements.
+
+Insert elements into the buckets from the array. The elements are inserted according to the range of the bucket. And Sort them with a suitable sorting technique.
+
+Representation of the buckets -&gt;
+
+|   |   | 0.23 |      | 0.42 | 0.51 |   |   |   |   |
+| 0 | 0 | 0.25 | 0.32 | 0.47 | 0.52 | 0 | 0 | 0 | 0 |
+  
+  0   1    2      3      4       5    6   7   8   9
+
+Traverse From Left to right and put the elements back into array in the same order.
+
+Sorted Array : 0.23 0.25 0.32 0.42 0.47 0.51 0.52
+</code></pre>
+<hr>
+<h2><a class="header" href="#code-2" id="code-2">Code</a></h2>
+<h3><a class="header" href="#code-for-bucket-sort" id="code-for-bucket-sort">Code For Bucket Sort.</a></h3>
+<pre><code class="language-cpp">void BucketSort(double a[],int n)
+{
+    // creating vector array of size 10
+    vector &lt;double&gt; bucket[10];
+
+    // putting elements in respective bucket
+    for(int i=0;i&lt;n;i++)
+        bucket[ int(10 * a[i]) ].push_back(a[i]);
+    
+    // sorting each bucket with quick sort
+    for(int i=0;i&lt;10;i++)
+        sort(bucket[i].begin(),bucket[i].end());
+
+    // picking from bucket and placing back to the array
+    for(int i=0, j=0;i&lt;10;i++)
+    {
+        for(auto x : bucket[i])
+        {
+            a[j] = x;
+            j++;
+        }
+    }
+
+    // clearing the each bucket
+    for(int i=0;i&lt;10;i++)
+        bucket[i].clear();
+}
+</code></pre>
+<hr>
+<h2><a class="header" href="#time-complexity-6" id="time-complexity-6">Time Complexity</a></h2>
+<p><strong>Worst Case Complexity</strong> : O ( n<sup>2</sup> )</p>
+<p>When there are elements of close range in the array, they are likely to be placed in the same bucket. This may result in some buckets having more number of elements than others.
+It makes the complexity depend on the sorting algorithm used to sort the elements of the bucket.</p>
+<p>The complexity becomes even worse when the elements are in reverse order. If insertion sort is used to sort elements of the bucket, then the time complexity becomes O ( n<sup>2</sup> ).</p>
+<p><strong>Best Case Complexity</strong>: O(n+k)</p>
+<p>It occurs when the elements are uniformly distributed in the buckets with a nearly equal number of elements in each bucket.
+The complexity becomes even better if the elements inside the buckets are already sorted.</p>
+<p>If insertion sort is used to sort elements of a bucket then the overall complexity in the best case will be linear ie. O(n+k). O(n) is the complexity for making the buckets and O(k) is the complexity for sorting the elements of the bucket using algorithms having linear time complexity at the best case.</p>
+<hr>
+<p>Other Resources : <a href="https://www.geeksforgeeks.org/bucket-sort-2/">GFG Blog</a></p>
+<h1><a class="header" href="#heap-sort" id="heap-sort">Heap Sort</a></h1>
+<h2><a class="header" href="#example-problem-4" id="example-problem-4">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array with the help of Heap Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-4" id="discussion-4">Discussion</a></h2>
+<p><strong>Heap sort</strong> is a comparison based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end. We repeat the same process for the remaining elements.</p>
+<p>A <strong>Binary Heap</strong> is a Complete Binary Tree where items are stored in a special order such that value in a parent node is greater(or smaller) than the values in its two children nodes. The former is called as max heap and the latter is called min-heap. The heap can be represented by a binary tree or array.</p>
+<p>Here , we use array representation of complete binary tree. So for the index <code>i</code> the left child will be <code>2*i</code> and the right child will be <code>2*i+1</code>.</p>
+<hr>
+<h2><a class="header" href="#working-of-the-algorithm-3" id="working-of-the-algorithm-3">Working of the Algorithm</a></h2>
+<p><strong>Heap Sort Algorithm for sorting in increasing order:</strong></p>
+<ol>
+<li>Build a max heap from the input data. </li>
+<li>At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of the tree. </li>
+<li>Repeat step 2 while size of heap is greater than 1.</li>
+</ol>
+<p><strong>Algorithm for building max heap:</strong></p>
+<ol>
+<li>A single element is already in a heap.</li>
+<li>When we add next elemnt , add it at the last of the array, so that it is a complete binary tree.</li>
+<li>Now , the newly inserted element is a leaf element. So we compare the element with it's parent element <code>(i/2)</code> and if the inserted element is greater than it's parent we place the parent node at the leaf position . And we repeat this process , until we find the proper position for the newly inserted element.</li>
+</ol>
+<p><strong>Algorithm for deletion:</strong></p>
+<ol>
+<li>We can only delete a root element from the max heap.</li>
+<li>So we swap the last element of the complete binary tree with the root element and bring the root element to it's proper position. In this process the size of max heap decreases by 1.</li>
+</ol>
+<h2><a class="header" href="#illustration-3" id="illustration-3">Illustration</a></h2>
+<pre><code>Input data : 6 25 10 5 40
+
+Now , as discussed above 6 that is the single element is already a heap.
+
+Inserting 25 -&gt;
+
+          6        Applying Heap       25
+         /        --------------&gt;     /
+        25                           6
+
+Inserting 10 -&gt;
+
+         25        Applying Heap       25
+        /  \      ---------------&gt;    /  \
+       6    10                       6    10
+
+Repeating the same process , the final heap is -&gt;
+
+                    40
+                   /  \
+                 25    10
+                /  \ 
+               5    6   
+
+So the new array becomes : 40 25 10 5 6
+
+We have build our max heap , now we keep on deleting the root element and keep on adding the element at the end of the array and put the last element of the heap to the node.
+
+      6                                      25
+     / \        Making it Heap again        /  \
+   25   10       ---------------&gt;          6    10
+   /                                      /
+  5                                      5
+
+So now the array becomes : 25 6 10 5 || 40 , where the elements before || is a heap.
+
+Repeating the same process until the size of the heap becomes 1 , our array becomes : 5 6 10 25 40
+
+Hence the array is sorted.
+</code></pre>
+<hr>
+<h2><a class="header" href="#code-3" id="code-3">Code</a></h2>
+<h3><a class="header" href="#code-for-insertion" id="code-for-insertion">Code For Insertion</a></h3>
+<pre><code class="language-cpp">void InsertHeap(int arr[],int n)
+{
+    // taking the newly inserted element as temp
+    int temp = arr[n] , i = n;
+
+    // finding correct position for temp
+    while(i&gt;1 &amp;&amp; temp&gt;arr[i/2])
+    {
+        arr[i] = arr[i/2];
+        i/=2;
+    }
+
+    //placing the temp at the correct position
+    arr[i] = temp;
+}
+</code></pre>
+<h3><a class="header" href="#code-for-deletion" id="code-for-deletion">Code for Deletion.</a></h3>
+<pre><code class="language-cpp">void DeleteHeap(int a[],int n)
+{
+    int i = 1;
+    int j = i*2;
+
+    // swapping the root and the last element
+    swap(a[1],a[n]);
+
+    // coverting the rest array into heap again
+    while(j&lt;n-1)
+    {
+        // comparing the left and right child for finding the greater one
+        if(a[j+1]&gt;a[j])
+            j = j+1;
+
+        // cehcking for the correct position
+        if(a[i]&lt;a[j])
+        {
+            swap(a[i],a[j]);
+            i = j;
+            j = j*2;
+        }
+        else
+            break;
+    }
+}
+</code></pre>
+<h3><a class="header" href="#code-for-heap-sort" id="code-for-heap-sort">Code for Heap Sort.</a></h3>
+<pre><code class="language-cpp">void HeapSort(int a[],int n)
+{
+    // making the max heap
+    for(int i=2;i&lt;n;i++)
+        InsertHeap(a,i);
+    
+    // deleting the root and placing at last of the array
+    for(int i=n;i&gt;1;i--)
+        DeleteHeap(a,i);
+}
+</code></pre>
+<hr>
+<h2><a class="header" href="#time-complexity-7" id="time-complexity-7">Time Complexity</a></h2>
+<p>Each Insertion algorithm takes O(logn) time and we insert n number of elements in the heap , so the total time complexity for insertion is O(nlogn).</p>
+<p>Similarly , each Insertion algorithm takes O(logn) time and we delete n number of elements in the heap , so the total time complexity for deletion is O(nlogn).</p>
+<p>So the total time complexity for heap sort is (nlogn).</p>
+<hr>
+<h2><a class="header" href="#note" id="note">Note</a></h2>
+<p>One thing to be noted is that , the time complexity of insertion algorithm can be reduced by using heapify. In heapify we check elemnts from last and see if the elemnt is greater than it's child element . If it is not then we apply heapify on the sub tree to make it a proper heap.</p>
+<h2><a class="header" href="#code-for-heapify" id="code-for-heapify">Code for Heapify</a></h2>
+<pre><code class="language-cpp">void heapify(int arr[], int n, int i)
+{
+    int largest = i; // Initialize largest as root
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+ 
+    // If left child is larger than root
+    if (l &lt; n &amp;&amp; arr[l] &gt; arr[largest])
+        largest = l;
+ 
+    // If right child is larger than largest so far
+    if (r &lt; n &amp;&amp; arr[r] &gt; arr[largest])
+        largest = r;
+ 
+    // If largest is not root
+    if (largest != i) {
+        swap(arr[i], arr[largest]);
+ 
+        // Recursively heapify the affected sub-tree
+        heapify(arr, n, largest);
+    }
+}
+</code></pre>
+<h2><a class="header" href="#code-for-heap-sort-1" id="code-for-heap-sort-1">Code for Heap Sort</a></h2>
+<pre><code class="language-cpp">void heapSort(int arr[], int n)
+{
+    // Build heap (rearrange array)
+    for (int i = n / 2 - 1; i &gt;= 0; i--)
+        heapify(arr, n, i);
+ 
+    // One by one extract an element from heap
+    for (int i = n - 1; i &gt; 0; i--) {
+        // Move current root to end
+        swap(arr[0], arr[i]);
+ 
+        // call max heapify on the reduced heap
+        heapify(arr, i, 0);
+    }
+}
+</code></pre>
+<p>Above Code is from <a href="https://www.geeksforgeeks.org/heap-sort/">GFG Blog</a>. </p>
+<hr>
+<p>Application Problems</p>
+<ul>
+<li><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></li>
+<li><a href="https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1">Kth Smallest Element in an Array</a></li>
+</ul>
+<h1><a class="header" href="#radix-sort" id="radix-sort">Radix Sort</a></h1>
+<h2><a class="header" href="#example-problem-5" id="example-problem-5">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Radix Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-5" id="discussion-5">Discussion</a></h2>
+<p>Since you are reading this , I assume that you have already gone through most of the comparison sorts that is <code>Merge Sort , Quick Sort , etc</code> . Problem with comparison based algorithm is that the lower bound complexity for them is <code>nlogn</code>. They cannot do better than that.</p>
+<p><code>Counting Sort , Bin Bucket Sort </code> can be used to tackle this problem , but problem with counting sort is that if the maximum number in the array is of the order n<sup>2</sup> , then the running time complexity would be of the order O(n<sup>2</sup>). Also the extra space required increases with the maximum number.</p>
+<p>The idea of <code>Radix Sort</code> is to do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.</p>
+<hr>
+<h2><a class="header" href="#working-of-the-algorithm-4" id="working-of-the-algorithm-4">Working of the Algorithm</a></h2>
+<p>Do following for each digit i where i varies from least significant digit to the most significant digit. </p>
+<ul>
+<li>Sort input array using counting sort (or any stable sort)       according to the i’th digit.</li>
+<li>Update The array.</li>
+</ul>
+<hr />
+<h3><a class="header" href="#illustration-4" id="illustration-4">Illustration</a></h3>
+<p>Let us look at the following illustration :</p>
+<pre><code>23 20 15 5 61 301 17 33
+
+Let's look at the one's position for each of the numbers.
+
+23  20  15  5  61  301  17  33
+ _   _   _  _   _    _   _   _
+
+Sort them according to the marked digits. If there are same digits put them from left to right according to the array.
+
+20  61  301  23  33  15  05  17
+_   _    _   _   _   _   _   _
+
+Sort them again according to Ten's place.
+
+301  005  015  017  020  023  033  061
+_    _    _    _    _    _    _    _
+
+Sort them again according to Hundred's place.
+
+005  015  017  020  023  033  061  301
+
+We get the final sorted array.
+
+5 15 17 20 23 33 61 301
+
+</code></pre>
+<hr>
+<h2><a class="header" href="#code-4" id="code-4">Code</a></h2>
+<h3><a class="header" href="#code-for-sorting-according-to-digits" id="code-for-sorting-according-to-digits">Code For Sorting according to digits</a></h3>
+<pre><code class="language-cpp">void digit_sort(int a[],int n,int exp)
+{
+    // declaring vector array of size 10. Since there are 10 digits.
+    vector &lt;int&gt; arr[10];
+
+    // pushing each number in their respective buckets.
+    for(int i=0;i&lt;n;i++){
+        arr[ (a[i]/exp) % 10 ].push_back(a[i]);
+    }
+
+    int j = 0;
+
+    // Updating the main array.
+    for(int i=0;i&lt;10;i++)
+    {
+        for(auto x:arr[i]){
+            a[j] = x;
+            j++;
+        }
+    }
+
+    // deleting the extra space.
+    for(int i=0;i&lt;10;i++)
+        arr[i].clear();
+}
+</code></pre>
+<h3><a class="header" href="#code-for-radix-sort" id="code-for-radix-sort">Code for Radix Sort.</a></h3>
+<pre><code class="language-cpp">void RadixSort(int a[],int n)
+{
+    // function for finding the max digit
+    int m = max_digit(a,n);
+
+    for(int i=1;i&lt;=m;i++)
+    {
+        // digit_sort for each place
+        digit_sort(a,n,int(pow(10,i-1)+0.5));
+    }
+}
+</code></pre>
+<h3><a class="header" href="#code-for-finding-maximum-number-of-digits" id="code-for-finding-maximum-number-of-digits">Code for finding maximum number of digits.</a></h3>
+<pre><code class="language-cpp">int max_digit(int a[], int n)
+{
+    int res = 0;
+    for(int i=0;i&lt;n;i++)
+    {
+        int temp = a[i] , count = 0;
+        while(temp)
+        {
+            temp/=10;
+            count++;
+        }
+        res = max(res,count);
+    }
+    return res;
+}
+</code></pre>
+<hr />
+<h2><a class="header" href="#time-complexity-8" id="time-complexity-8">Time Complexity</a></h2>
+<h3><a class="header" href="#what-is-the-running-time-of-radix-sort" id="what-is-the-running-time-of-radix-sort">What is the running time of Radix Sort?</a></h3>
+<p>Let there be d digits in input integers. Radix Sort takes <code>O(d*(n+b))</code> time where <code>b</code> is the base for representing numbers, for example, for the decimal system, b is 10. What is the value of d? If k is the maximum possible value, then d would be <code>O(logb(k))</code>. So overall time complexity is <code>O((n+b) * logb(k))</code>. Which looks more than the time complexity of comparison-based sorting algorithms for a large k. Let us first limit k. Let k &lt;= nc where c is a constant. In that case, the complexity becomes O(nLogb(n)). But it still doesn’t beat comparison-based sorting algorithms. </p>
+<h3><a class="header" href="#what-if-we-make-the-value-of-b-larger" id="what-if-we-make-the-value-of-b-larger">What if we make the value of b larger?.</a></h3>
+<p>What should be the value of b to make the time complexity linear? If we set b as n, we get the time complexity as <code>O(n)</code>. In other words, we can sort an array of integers with a range from 1 to nc if the numbers are represented in base n (or every digit takes <code>log2(n)</code> bits).</p>
+<hr>
+<p>Other Resources : <a href="https://www.geeksforgeeks.org/radix-sort/">GFG Blog</a></p>
+<h1><a class="header" href="#insertion-sort" id="insertion-sort">Insertion Sort</a></h1>
+<h2><a class="header" href="#example-problem-6" id="example-problem-6">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Insertion Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-6" id="discussion-6">Discussion</a></h2>
+<p>Look at the following list of numbers:</p>
+<pre><code>36 10 5 23 56 12
+</code></pre>
+<p>We scan the array from left to right. For every element in the array, we must ensure that the elements to the left are less than the current element( for sorting in ascending order) and the elements to the right have not yet been seen. </p>
+<p>We take 2 pointers- <code>i,j</code>. We exchange <code>arr[i]</code> with each larger element to its left. At first, the pointer i is at position 0. So <code>arr[0]=36</code> is at its correct position since there is there no element to its left.</p>
+<p>We then increment the pointer ''i''. The pointer i now points to <code>arr[1]=10</code>. Now the element to the left of 10 is 36. We see that the element 10 is not in its correct position, since there is an element to the left(=36) which is greater than 10. So we exchange their positions. The present array is <code>10 36</code>.</p>
+<p>We increment the pointer to point at <code>arr[2]=5</code>. The element 5 is not at its correct position. So we exchange 5 with 36. The current array is <code>10 5 36</code>. The element 5 is still not in its correct position as 10 is greater than 5. So we exchange 10 with 5. The current array becomes <code>5 10 36</code>.</p>
+<p>We continue this way.</p>
+<pre><code>Note: | marks the position of j.
+When i=0:
+36 | 10 5 23 56 12
+
+When i=1:
+36 10 | 5 23 56 12
+//36 greater than 10. So we exchange.
+10 | 36 5 23 56 12
+//Go no further as there is no element to left.
+
+When i=2:
+10 36 5 | 23 56 12
+//36 grrater than 5. So we exchange.
+10 5 | 36 23 56 12
+//10 greater than 5 . So we exchange.
+5 | 10 36 23 56 12
+//5 is at its correct position.
+
+When i=3:
+5 10 36 23 | 56 12
+//We exchange 36 and 23 as 36&gt;23.
+5 10 23 | 36 56 12
+//10&lt;23. So we need not go any further.
+
+When i=4:
+5 10 23 36 56 | 12
+//56 is larger than every element to the left. So no exchange needed.
+
+When i=5:
+5 10 23 36 56 12 |
+//12 is smaller than 56. So we exchange.
+5 10 23 36 12 | 56
+//12 is smaller than 36. So we exchange.
+5 10 23 12 | 36 56
+//12 is smaller than 23. So exchange is needed.
+5 10 12 | 23 36 56
+//12 is greater than 10. Hence we stop.
+</code></pre>
+<p>At this position we stop since we have traversed through the entire array.</p>
+<hr>
+<h2><a class="header" href="#code-for-the-algorithm" id="code-for-the-algorithm">Code for the Algorithm</a></h2>
+<h3><a class="header" href="#code-for-insertion-sort" id="code-for-insertion-sort">Code For Insertion Sort</a></h3>
+<pre><code class="language-java">public void sort(Comparable []a){
+   for(int i=0;i&lt;a.length;i++){
+      for (int j = i; j &gt; 0; j--){
+         if (less(a[j], a[j-1]))//if element at j is less than the element at j-1
+            exch(a, j, j-1);    //we exchange the two elements. 
+         else break;
+      }
+   }
+
+}
+</code></pre>
+<h1><a class="header" href="#shell-sort" id="shell-sort">Shell Sort</a></h1>
+<h2><a class="header" href="#example-problem-7" id="example-problem-7">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Shell Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-7" id="discussion-7">Discussion</a></h2>
+<p>Shell Sort is an improvement in the Insertion sort algorithm. It can be observed that the insertion sort works extremely well on almost sorted array. Shell sort makes use of this. We make the array h-sorted for a large value of h using the technique of insertion sort. We then keep reducing the value of h until it becomes 1.</p>
+<h4><a class="header" href="#note-an-array-is-said-to-be-h-sorted-if-all-sublists-of-every-hth-element-is-sorted" id="note-an-array-is-said-to-be-h-sorted-if-all-sublists-of-every-hth-element-is-sorted">Note: An array is said to be h-sorted if all sublists of every h'th element is sorted.</a></h4>
+<hr>
+<h2><a class="header" href="#illustration-5" id="illustration-5">Illustration:</a></h2>
+<img src="https://raw.githubusercontent.com/Ahel2000/StarBuzz/master/shell-sort.png"/>
+<hr>
+<h2><a class="header" href="#code-for-the-algorithm-1" id="code-for-the-algorithm-1">Code for the Algorithm</a></h2>
+<h3><a class="header" href="#determining-the-value-of-h-for-h-sorting" id="determining-the-value-of-h-for-h-sorting">Determining the value of h for h-sorting</a></h3>
+<pre><code class="language-java">while(h&lt;n/3)h=3*h+1;
+</code></pre>
+<h3><a class="header" href="#code-for-shell-sort" id="code-for-shell-sort">Code For Shell Sort</a></h3>
+<pre><code class="language-java">while(h&gt;=1){
+     for(int i=h;i&lt;n;i++){
+     //perform insertion sort for every h'th element
+         for(int j=i;j&gt;=h &amp;&amp; less(a[j],a[j-h]);j-=h){
+             exch(a,j,j-h);
+         }
+     }
+     h=h/3;
+ }
+</code></pre>
+<hr>
+<h2><a class="header" href="#resources" id="resources">Resources</a></h2>
+<p><a href="https://www.geeksforgeeks.org/shellsort/">GeeksforGeeks</a></p>
+<h1><a class="header" href="#merge-sort" id="merge-sort">Merge Sort</a></h1>
+<h2><a class="header" href="#example-problem-8" id="example-problem-8">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Merge Sort algorithm. </p>
+<hr>
+<h2><a class="header" href="#discussion-8" id="discussion-8">Discussion</a></h2>
+<p>Merge sort is an application of the Divide and Conquer Principle.The basic approach is to:</p>
+<ul>
+<li>Divide the array into two halves</li>
+<li>Sort each half recursively</li>
+<li>Merge the two halves</li>
+</ul>
+<p>
+<img src="https://user-images.githubusercontent.com/66062504/99971682-89e08f00-2dc3-11eb-9860-973c837e0e6f.png"/>
+</p>
+<hr>
+<h3><a class="header" href="#code-for-merge-sort" id="code-for-merge-sort">Code For Merge Sort</a></h3>
+<p>Merge Sort:</p>
+<pre><code class="language-java">public static void mergesort(Comparable[] workplace,int lowerbound,int upperbound){
+        if(lowerbound==upperbound){
+            return;
+        }
+        else{
+        int mid=(lowerbound+upperbound)/2;
+        mergesort(workplace,lowerbound,mid);
+        mergesort(workplace,mid+1,upperbound);
+        merge(workplace,lowerbound,mid+1,upperbound);
+        }
+    }
+    
+</code></pre>
+<p>Merging two sorted arrays:</p>
+<pre><code class="language-java">public static void merge(Comparable[] workplace,int lowPtr,int highPtr,int upperbound)
+    {
+        int low=lowPtr;
+        int mid=highPtr-1;
+        int j=0;
+        int n=upperbound-low+1;
+        while(low&lt;=mid &amp;&amp; highPtr&lt;=upperbound){
+           if(theArray[low].compareTo(theArray[highPtr])&lt;0){
+               workplace[j++]=theArray[low++];
+            }else{
+                workplace[j++]=theArray[highPtr++];
+            }
+        }
+        
+        while(low&lt;=mid){
+            workplace[j++]=theArray[low++];
+        }
+        
+        while(highPtr&lt;=upperbound){
+            workplace[j++]=theArray[highPtr++];
+        }
+        
+        for(j=0;j&lt;n;j++){
+            theArray[lowPtr+j]=workplace[j];
+        }
+    }
+</code></pre>
+<h3><a class="header" href="#time-complexity-9" id="time-complexity-9">Time Complexity:</a></h3>
+<p>Time complexity of Merge Sort is O(n*Log n) in all the 3 cases (worst, average and best) as merge sort always divides the array in two halves and takes linear time to merge two halves. It requires equal amount of additional space as the unsorted array.</p>
+<h3><a class="header" href="#resources-1" id="resources-1">Resources:</a></h3>
+<p><a href="https://www.geeksforgeeks.org/merge-sort">GeeksforGeeks</a></p>
+<h1><a class="header" href="#selection-sort" id="selection-sort">Selection Sort</a></h1>
+<h2><a class="header" href="#example-problem-9" id="example-problem-9">Example Problem</a></h2>
+<p>Given an array <code>arr = [a1,a2,a3,a4,a5...,an] </code> , we need to sort the array the array with the help of Selection Sort algorithm.</p>
+<hr>
+<h2><a class="header" href="#discussion-9" id="discussion-9">Discussion</a></h2>
+<p>Selection sort is a simple sorting algorithm where we divide an array into two parts- sorted and unsorted. Initially the sorted part is empty. We find the smallest element of the unsorted part. Then we swap it with the leftmost element of the unsorted part. The leftmost element then becomes a member of the sorted part. </p>
+<p>
+<img src="https://user-images.githubusercontent.com/66062504/99956054-614c9b00-2dab-11eb-81d1-c53c51fd776b.jpeg" alt="selection"/>
+</p>
+<hr>
+<h3><a class="header" href="#code-for-selection-sort" id="code-for-selection-sort">Code For Selection Sort</a></h3>
+<pre><code class="language-java">public static void sort(Comparable a[])
+    {
+        // initialise instance variables
+        for(int i=0;i&lt;a.length;i++){
+            int min=i;
+            for(int j=i+1;j&lt;a.length;j++){
+                if(less(a[j],a[min])){//if a[j] less than min
+                    min=j;             //then update position of min
+                }
+            }
+            exch(a,i,min);//swap the i-th element with the minimum element
+        }
+    }
+    
+</code></pre>
+<h3><a class="header" href="#resources-2" id="resources-2">Resources:</a></h3>
+<p><a href="https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/tutorial/">HackerEarth</a></p>
+<h2><a class="header" href="#what-is-backtracking" id="what-is-backtracking">What is Backtracking?</a></h2>
+<p>Backtracking is an algorithmic-technique for solving problems recursively by trying to build a solution <em>incrementally</em>, one piece at a time, and abandons a candidate (or &quot;backtracks&quot;) as soon as it determines that the candidate cannot possibly result in a valid solution.</p>
+<p><strong>Where is it used?</strong></p>
+<p>Usually in constraint satisfaction problems. Backtracking is useful while solving certain NP-complete problems where the theoretical upperbound is as bad as N! or 2 ^ N or even N ^ N.</p>
+<p><img src="https://miro.medium.com/max/2912/1*Q-DyKa25eozOeMdN5YQONA.png" alt="N Queens" /></p>
+<h2><a class="header" href="#typical-backtracking-recursive-function" id="typical-backtracking-recursive-function">Typical backtracking recursive function</a></h2>
+<h3><a class="header" href="#explanation" id="explanation">Explanation</a></h3>
+<p>The backtracking algorithm uses recursion and so can be represented as a tree structure where each node differs from its parent by a single extension step. The leaves of the tree are nodes where there is no more extension possible (either the problem is solved, or there are no valid candidates satisfying the contraints at the next extension).</p>
+<p>The search tree is traversed from root down in <strong>depth-first order</strong>. At each node, we check if the node leads us to the path giving us a complete valid solution. If not, then the whole subtree rooted at that node is skipped, or pruned.</p>
+<p>If the node itself is a valid solution (in which case it would be the leaf node), boolean value True is returned, indicating the solution has been found and we do not need to search any longer.</p>
+<p>If a node lies on the path to the solution, then we return with boolean value True. This can be determined if the recursive call to its subtree returns True or not.</p>
+<p>The distance of a node from the root determines how many values have been filled in yet.</p>
+<h4><a class="header" href="#pseudocode" id="pseudocode">Pseudocode</a></h4>
+<pre><code>
+def solve_backtrack():
+    if is_solved(): // base case: solution has been found
+        return True
+
+    for candidate in candidates:
+        if not is_feasible(candidate): // if candidate is not a valid choice
+            continue
+
+        accept(candidate) // use candidate for the current instance
+        if solve_backtrack(): // recursive call
+            return True // if problem solved, return True
+        reject(candidate) // problem not solved, remove candidate used and continue in loop
+
+    return False // solution does not exist
+
+</code></pre>
+<h2><a class="header" href="#common-backtracking-problems" id="common-backtracking-problems">Common Backtracking Problems</a></h2>
+<h3><a class="header" href="#n-queens" id="n-queens">N Queens</a></h3>
+<p><strong>Problem Statement:</strong></p>
+<p>In a chess game, a Queen can move along 3 axes - horizontal, vertical and diagonal. In this problem, we have an N x N chess board. </p>
+<p>Place N Queens on this board in such a way that no two Queens can kill each other (no Queen can reach the position of another Queen in just one move).</p>
+<p><img src="https://assets.leetcode.com/uploads/2018/10/12/8-queens.png" alt="N Queens" /></p>
+<h3><a class="header" href="#sudoku" id="sudoku">Sudoku</a></h3>
+<p><strong>Problem Statement:</strong></p>
+<p>A sudoku grid is usually a 9 x 9 grid, with some blocks containing a few numbers initially. These numbers fall in the range 1 to 9. A sudoku grid is further divided into 9 3 x 3 subgrids.</p>
+<p>We need to fill all the blocks in the grid with numbers from 1 to 9 only, while keeping the following constraints in mind:</p>
+<ul>
+<li>
+<p>Each row has only one occurrence of every number from 1 to 9</p>
+</li>
+<li>
+<p>Each column has only one occurrence of every number from 1 to 9</p>
+</li>
+<li>
+<p>Each subgrid has only one occurrence of every number from 1 to 9</p>
+</li>
+</ul>
+<p>A valid sudoku puzzle has a unique solution. However, puzzles with not enough initial values may have more than one valid solution - but these would not be valid sudoku puzzles.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Sudoku_solved_by_bactracking.gif/260px-Sudoku_solved_by_bactracking.gif" alt="Sudoku Solver" /></p>
+<h3><a class="header" href="#maze-solver" id="maze-solver">Maze Solver</a></h3>
+<p><strong>Problem Statement:</strong></p>
+<p>Given a maze, a starting point and a finishing point, write a backtracking algorithm that will find a path from the starting point to the finishing point.</p>
+<p><img src="https://www.geeksforgeeks.org/wp-content/uploads/ratinmaze_filled_path1.png" alt="Maze Solver" /></p>
+<h3><a class="header" href="#string-permutation" id="string-permutation">String Permutation</a></h3>
+<p><strong>Problem Statement:</strong></p>
+<p>Given a string, find all possible permutations that can be generated from it.</p>
+<p>Example:</p>
+<p>ABC</p>
+<p>ACB</p>
+<p>BAC</p>
+<p>BCA</p>
+<p>CAB</p>
+<p>CBA</p>
+<h3><a class="header" href="#m-colouring" id="m-colouring">M Colouring</a></h3>
+<p><strong>Problem Statement:</strong></p>
+<p>Given a graph, find a way to colour every node such that no two connected nodes (nodes which share an edge) are coloured the same and minimum possible number of colours are used.</p>
+<p><em>On a side-but-related note, one might be interested to check out the <em><strong>four colour theorem</strong></em>, proved in 1976.</em></p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/mcolor.png" alt="M Colouring Graph" /></p>
+<h1><a class="header" href="#persistent-data-structure" id="persistent-data-structure">Persistent Data Structure</a></h1>
+<p>In normal DS when we change or update a particular value the entire DS gets changed. Consider an array <code>arr = [1, 2, 3, 4, 4]</code>, now if we want to update <code>arr[2]</code> to 6 it will become <code>[1, 2, 6, 4, 4]</code>. This final array now lost its pervious state. But in case of <strong>Persistent DS</strong> it will preserve it's previous states as well. </p>
+<p>Persistent Datastructure preserves all versions of itself</p>
+<ul>
+<li>Every update to the data structure creates a new version</li>
+<li><code>Update(version, &lt;value&gt;): </code>  returns a new version</li>
+</ul>
+<h2><a class="header" href="#types-of-persistence" id="types-of-persistence">Types of Persistence</a></h2>
+<h3><a class="header" href="#1-parital-persistence" id="1-parital-persistence">1. Parital Persistence</a></h3>
+<ul>
+<li>Query any versions of the DS</li>
+<li>Update only the latest version of DS</li>
+</ul>
+<p>Let's say we have a series of versions as follows (in the form of Linked List):</p>
+<p>v1 -&gt; v2 -&gt; v3 </p>
+<p>Now if we want to make some changes we can only do that to the v3, so after this update we will have</p>
+<p>v1 -&gt; v2 -&gt; v3 -&gt; <strong>v4</strong></p>
+<p>Hence, all the versions will always be linearly ordered (due to the additional constraint)</p>
+<h3><a class="header" href="#2-full-persistence" id="2-full-persistence">2. Full Persistence</a></h3>
+<ul>
+<li>Query any versions of the DS (typical of any persistence)</li>
+<li>Update any version of the DS</li>
+</ul>
+<p>Let's say initially you only one version v1, and then you make an update you get</p>
+<pre><code>v1 -&gt; v2
+</code></pre>
+<p>Now you apply another update but again to v1 (this was not possible in partial persistence) here it will branch off as show below</p>
+<pre><code>        v1
+       /  \ 
+     v2    v3
+
+</code></pre>
+<p>Again if we update v3 we will get:-</p>
+<pre><code>        v1
+       /  \ 
+     v2    v3
+            \
+            v4 
+</code></pre>
+<p>Hence, in full persistence the versions will form a tree. </p>
+<blockquote>
+<p>A DS that supports full persistence will always support partial persistence.</p>
+</blockquote>
+<h1><a class="header" href="#persistent-segment-tree" id="persistent-segment-tree">Persistent segment tree</a></h1>
+<h2><a class="header" href="#example-problem-" id="example-problem-">Example problem :</a></h2>
+<p>We have an array a1, a2, ..., an and at first q update queries and then u ask queries which you have to answer online.
+Each update query gives you numbers p and v and asks you to increase ap by v.
+Each ask query, gives you three numbers <code>i</code> and <code>x</code> and <code>y</code> and asks you to print the value of <code>ax + ax + 1 + ... + ay</code> after performing <code>i - th</code> query.</p>
+<h2><a class="header" href="#solution-4" id="solution-4">Solution</a></h2>
+<p>Each update query, changes the value of <code>O(log(n))</code> nodes in the segment tree, so you should keep rest of nodes (not containing p) and create <code>log(n)</code> new nodes. Totally, you need to have <code>q.log(n)</code> nodes. So, you can not use normal segment's indexing, you should keep the index of children in the arrays L and R.</p>
+<p>If you update a node, you should assign a new index to its interval (for i - th query).</p>
+<p>You should keep an array <code>root[q]</code> which gives you the index of the interval of the <code>root ( [0, n) )</code> after performing each query and a number ir = 0 which is its index in the initial segment tree (ans of course, an array s[MAXNODES] which is the sum of elements in that node). Also you should have a NEXT_FREE_INDEX = 1 which is always the next free index for a node.</p>
+<p>First of all, you need to build the initial segment tree :</p>
+<p>(In these codes, all arrays and queries are 0-based)</p>
+<pre><code class="language-cpp">void build(int id = ir,int l = 0,int r = n){
+	if(r - l &lt; 2){
+		s[id] = a[l];
+		return ;
+	}
+	int mid = (l+r)/2;
+	L[id] = NEXT_FREE_INDEX ++;
+	R[id] = NEXT_FREE_INDEX ++;
+	build(L[id], l, mid);
+	build(R[id], mid, r);
+	s[id] = s[L[id]] + s[R[id]];
+}
+</code></pre>
+<p>(So, we should call build() )</p>
+<p>Update function : (its return value, is the index of the interval in the new version of segment tree and id is the index of old one)</p>
+<pre><code class="language-cpp">int upd(int p, int v,int id,int l = 0,int r = n){
+	int ID =  NEXT_FREE_INDEX ++; // index of the node in new version of segment tree
+	if(r - l &lt; 2){
+		s[ID] = (a[p] += v);
+		return ID;
+	}
+	int mid = (l+r)/2;
+	L[ID] = L[id], R[ID] = R[id]; // in case of not updating the interval of left child or right child
+	if(p &lt; mid)
+		L[ID] = upd(p, v, L[ID], l, mid);
+	else
+		R[ID] = upd(p, v, R[ID], mid, r);
+	return ID;
+}
+</code></pre>
+<p>(For the first query (with index 0) we should run root[0] = upd(p,  v,  ir) and for the rest of them, for j - th query se should run root[j] = upd(p,  v,  root[j - 1]) )</p>
+<p>Function for ask queries :</p>
+<pre><code class="language-cpp">int sum(int x,int y,int id,int l = 0,int r = n){
+	if(x &gt;= r or l &gt;= y)	return 0;
+	if(x &lt;= l &amp;&amp; r &lt;= y)	return s[id];
+	int mid = (l+r)/2;
+	return sum(x, y, L[id], l, mid) +
+	       sum(x, y, R[id], mid, r);
+}
+</code></pre>
+<p>(So, we should print the value of sum(x, y, root[i]) )</p>
+<p>Source: <a href="https://codeforces.com/blog/entry/15729">CF Blog</a></p>
+<h1><a class="header" href="#tree" id="tree">Tree</a></h1>
+<p>We can define <em>Tree</em> as a connected undirected graph with <em>no cycles</em> .</p>
+<p>There are some more ways we can define Tree . Here are some equivalent definitions : </p>
+<ul>
+<li>connected undirected graph with N nodes  and N-1 edges.</li>
+<li>connected undirected graph with only unique paths i.e there is one and only path from one node to another.</li>
+<li>connected undirected graph where if you remove 1 edge it no longer remains connected.</li>
+</ul>
+<br>
+<h2><a class="header" href="#tree-algorithms-" id="tree-algorithms-">Tree Algorithms :</a></h2>
+<ul>
+<li><a href="Graph/Tree/./Diameter/diameter.html">Diameter</a></li>
+<li><a href="Graph/Tree/./Lowest_Common_Ancestor/LCA.html">Lowest Common Ancestor</a></li>
+</ul>
+<h1><a class="header" href="#diameter-of-a-tree" id="diameter-of-a-tree">Diameter of a tree</a></h1>
+<p>The Diameter of tree is the <em>maximum</em> length between two nodes. For example : <br>
+Consider the following tree of 7 nodes</p>
+<div align = "center">
+<img height = "100"  src = "https://user-images.githubusercontent.com/58760297/99883654-e1a9b980-2c4e-11eb-979c-02dce3dd276d.png"/> 
+</div><br>
+<p>Here, <em>Diameter</em> = 4 . </p>
+<h2><a class="header" href="#algorithm" id="algorithm">Algorithm</a></h2>
+<p>First, root the tree arbitarily.</p>
+<div align = "center">
+<img height = "175"  src = "https://user-images.githubusercontent.com/58760297/99886616-fe042100-2c63-11eb-9334-81907b4c1ba6.png"/>
+</div><br>
+<p>For each <em>node</em>, we calculate <em>toLeaf(node)</em> which denotes 
+<em>maximum</em> length of a path from the <em>node</em> to any <em>leaf</em>.<br></p>
+<pre><code>if node is leaf :
+    toLeaf[node] = 0
+else
+    toLeaf[node] = 1 + max(toLeaf[child]) | for all child of node
+</code></pre>
+<br>
+<p>We can use DFS to calculate <em>toLeaf(node)</em>.<br></p>
+<pre><code class="language-cpp">vector&lt;int&gt; toLeaf(n+1, 0); // n is no. of nodes
+void dfs(int node){
+    visited[node] = true;
+    for(int child : tree[node]){
+        if(visited[child])
+            continue;
+        dfs(child);
+        toLeaf[node] = max(toLeaf[node], 1 + toLeaf[child]);
+    }
+}
+</code></pre>
+<br>
+<div align = "center">
+<img height = "175"  src = "https://user-images.githubusercontent.com/58760297/99886436-8da8d000-2c62-11eb-8c39-27906df824e5.png"/>
+</div><br>
+<p>Now calculate <em>path_length(node)</em> which denotes <em>maximum</em> length of a path whose highest point is node.</p>
+<pre><code>if node is leaf :
+    path_length[node] = 0
+else if node has only 1 child :
+    path_length[node] = toLeaf[child] + 1
+else
+    Take two distinct child a,b such that (toLeaf[a] + toLeaf[b]) is maximum, then
+    path_length[node] = (toLeaf[a] + 1) + (toLeaf[b] + 1)
+    
+</code></pre>
+<p>Here is the implementation .</p>
+<pre><code class="language-cpp">vector&lt;int&gt; toLeaf(n+1, 0), path_length(n+1, 0);
+void dfs(int node){
+    visited[node] = true;
+    vector&lt;int&gt; length = {-1}; // allows us to handle the cases when node has less than 2 children
+    for(int child : tree[node]){
+        if(visited[child])
+            continue;
+        dfs(child);
+        toLeaf[node] = max(toLeaf[node], 1 + toLeaf[child]); 
+        length.push_back(toLeaf[child]);
+    }
+    int s = length.size(), m = min((int)length.size(),2);
+    for(int i = 0; i &lt; m; i++){
+        for(int j = i+1; j &lt; s; j++){
+            if(length[i] &lt; length[j])
+                swap(length[i], length[j]);
+        }
+        path_length[node] += length[i] + 1;
+    }   
+}    
+</code></pre>
+<br>
+<div align = "center">
+<img height = "175"  src = "https://user-images.githubusercontent.com/58760297/99886528-3a834d00-2c63-11eb-8671-4d7eb16560c4.png"/>
+</div><br>
+<p>Finally, <em>Diameter = maximum</em> of all lengths in path_length. Therefore here, <em>Diameter</em> = 4.</p>
+<h2><a class="header" href="#problems" id="problems">Problems</a></h2>
+<ul>
+<li><a href="https://cses.fi/problemset/task/1131/">Tree Diameter</a></li>
+</ul>
+<h2><a class="header" href="#reference" id="reference">Reference</a></h2>
+<ul>
+<li>Competitive Programmer's Handbook by Antii Laaksonen.</li>
+</ul>
+<h1><a class="header" href="#lowest-common-ancestor" id="lowest-common-ancestor">Lowest Common Ancestor</a></h1>
+<p>Given a rooted tree \(T\) of \(n\) nodes. The ancestors of a \(node\ u\) are all the nodes in the path from \(node\ u\) to \(root\) (excluding \(u\)).
+Now Let's see how we can find \(LCA\) of two \(node\ u\) and \(v\).
+<br><div align = "center">
+<img height = "175"  src = "https://user-images.githubusercontent.com/58760297/105862267-9aa4bf80-6015-11eb-86b1-3b8f03040904.png"/></p>
+</div><br>
+<h2><a class="header" href="#algorithm-1--on" id="algorithm-1--on">Algorithm \(1\) : \(O(n)\)</a></h2>
+<p>climb up from the deeper \(node\) such that \(depth[u] == depth[v]\). <br>
+Now climb up from both the node until \(u == v\).</p>
+<p><br><div align = "center">
+<img height = "400"  src = "https://user-images.githubusercontent.com/58760297/105890276-2c6ff500-6035-11eb-9c71-56e89742f652.png"/></p>
+</div><br>
+<h3><a class="header" href="#implementation-" id="implementation-">Implementation :</a></h3>
+<pre><code class="language-cpp">int LCA(int u, int v){
+    if(depth[u] &gt; depth[v])
+        swap(u, v);
+    int h = depth[v] - depth[u];
+    for(int i = 0; i &lt; h; i++) // lifting v up to the same level as u
+        v = parent[v];
+    
+    while(u != v){ // climbing up egde by egde from u and v
+        u = parent[u];
+        v = parent[v];
+    }
+    return u;
+}
+</code></pre>
+<p>Here, as we are climbing edge by egde, hence in worst case it will take \(O(n)\) time to compute LCA.</p>
+<h2><a class="header" href="#algorithm-2--ologn" id="algorithm-2--ologn">Algorithm \(2\) : \(O(logn)\)</a></h2>
+<p>Instead of climbing edge by edge, we can make higher jumps from the node : say, from  \(node\ u\) to \(2^i\) distant ancestor of \(u\). We need to precompute \(ancestor[n][k]\) : such that, \(ancestor[i][j]\) will store \(2^j\) distant ancestor of \(node\ i\).</p>
+<p>\(n\) = no. of nodes
+if  \(2^k &gt; n\), then we jump off the tree. Hence \( k = 1 + log_2(n) \)</p>
+<p>We know, \(2^j = 2^{j-1} + 2^{j-1}\) 
+therefore, \(ancestor[i][j] = ancestor[\ ancestor[i][j-1]\ ][j-1]\)
+Note : \(parent[root] = -1\); \(ancestor[i][0]\) is simply the parent of \(node\ i\).</p>
+<pre><code class="language-cpp">// Computing ancestor table
+int k = 1 + log2(n);
+vector&lt;vector&lt;int&gt;&gt; ancestor(n+1, vector&lt;int&gt; (k));
+
+for(int i = 1; i &lt;= n; i++){
+    ancestor[i][0] = parent[i];
+}
+
+for(int i = 1; i &lt;= n; i++){
+    for(int j = 1; j &lt; k; j++){
+        if(ancestor[i][j-1] != -1) // we didn't jump off the tree
+            ancestor[i][j] = ancestor[ ancestor[i][j-1] ][j-1]
+        else
+            ancestor[i][j] = -1
+    }
+}
+</code></pre>
+<h3><a class="header" href="#binary-lifting-" id="binary-lifting-">Binary Lifting :</a></h3>
+<p>Now say, we need to make a jump of height \(h = 45\) from a \(node\ u\).
+\(h = 45 = (101101)_2 = (2^5 + 2^3 + 2^2 + 2^0) jumps\). <br>
+we can implement this jump as following :</p>
+<pre><code class="language-cpp">int jump(int u, int h){
+    for(int i = 0; h &amp;&amp; u != -1;i++){
+        if(h &amp; 1)
+            u = ancestor[u][i];
+        h = h &gt;&gt; 1;
+    }
+    return u;
+}
+</code></pre>
+<h3><a class="header" href="#computing-lca-" id="computing-lca-">Computing LCA :</a></h3>
+<p>Using the \(Binary\ Lifting\) technique, make jump of a \(height = depth[v] - depth[u]\) from the deeper \(node\ v\).</p>
+<p>if \(u == v\) already then \(return\ u\).</p>
+<p>from \(node\ u\) and \(node\ v\), make jump as high as possible such that \(ancestor[u][jump]\ != ancestor[v][jump]\),
+then eventually we will reach a node, \(parent[u] = parent[v] = LCA(u, v)\)</p>
+<p>thus \(return\ parent[u]\).</p>
+<div align = "center">
+<img height = "400"  src = "https://user-images.githubusercontent.com/58760297/105969917-caec6c80-60ae-11eb-8405-4d1f2e83a525.png"/>
+</div>
+<h3><a class="header" href="#implementation--1" id="implementation--1">Implementation :</a></h3>
+<pre><code class="language-cpp">int LCA(int u, int v){
+    if(depth[u] &gt; depth[v])
+        swap(u, v);
+    v = jump(v, depth[v] - depth[u]);
+    if(u == v)
+        return u;
+    
+    int h = 1 + log2(depth[u]);
+    for(int i = h-1; i &gt;= 0; i--){
+        if(ancestor[u][i] != -1 &amp;&amp; ancestor[u][i] != ancestor[v][i]){
+            u = ancestor[u][i];
+            v = ancestor[v][i];
+        }
+    }
+    return parent[u];
+}
+</code></pre>
+<h2><a class="header" href="#problems-1" id="problems-1">Problems</a></h2>
+<ul>
+<li><a href="https://cses.fi/problemset/task/1687">Company Querries I</a></li>
+<li><a href="https://cses.fi/problemset/task/1688">Company Querries II</a></li>
+</ul>
+<h2><a class="header" href="#reference-1" id="reference-1">Reference</a></h2>
+<ul>
+<li><a href="https://youtu.be/kOfa6t8WnbI">Algorithms Live</a></li>
+<li><a href="https://cp-algorithms.com/graph/lca_binary_lifting.html">cp-algorithms</a></li>
+</ul>
+<h1><a class="header" href="#string-processing" id="string-processing">String Processing</a></h1>
+<p>A string is nothing but a sequence of symbols or characters. Sometimes, we come across problems where a string is given and the task is to search for a given pattern in that string. The straightforward method is to check by traversing the string index by index and searching for the pattern. But the process becomes slow  when the length of the 
+string increases.
+So, in this case hashing algorithms prove to be very useful.
+The topics covered are :</p>
+<ul>
+<li><a href="String_Processing/./String_Hashing/String_Hashing.html">String Hashing</a></li>
+<li><a href="String_Processing/./Rabin-Karp_Algorithm/Rabin-Karp.html">Rabin Karp Algorithm</a></li>
+</ul>
+<h1><a class="header" href="#string-hashing" id="string-hashing">String Hashing</a></h1>
+<p>We need this to compare the strings. Idea is to convert each string to integer and compare those instead of the actual strings which is O(1) operation. The conversion is done by a <em><strong>Hash-Function</strong></em> and the integer obtained corresponding to the string is called <em>hash</em> of the string.
+A widely used function is   <em>polynomial rolling hash function</em> :</p>
+<p><img src="https://hapq.me/content/images/2019/11/Screen-Shot-2019-11-06-at-4.59.06-PM.png" alt="" /></p>
+<p>where <em>p</em> and <em>m</em> are some chosen, positive numbers. <em>p</em> is a prime approximately equal to the number of characters in the input alphabet and <em>m</em> is a large number.
+Here, it is m=10^9 + 9.</p>
+<p><em>The number of possible characters is higher  and pattern length can be large. So the numeric values cannot be practically stored as an integer. Therefore, the numeric value is calculated using modular arithmetic to make sure that the hash values can be stored in an integer variable.</em></p>
+<h2><a class="header" href="#implementation-2" id="implementation-2">Implementation</a></h2>
+<pre><code class="language-cpp">    long long compute_hash(string  const&amp; s)
+     { 
+       const  int p = 31; 
+       const  int m = 1e9 + 9;
+       long  long hash_value = 0; 
+       long  long p_pow = 1;
+       for (char c : s) 
+       {
+         hash_value = (hash_value + (c - 'a' + 1) * p_pow)%m; 
+         p_pow = (p_pow * p) % m;
+       } 
+       return hash_value; 
+     }
+</code></pre>
+<p>Two strings with equal hashes need not be equal. There are possibilities of collision which can be resolved by simply calculating hashes using two different values of <em>p</em> and <em>m</em> which reduces the probability of collision.</p>
+<h2><a class="header" href="#examples-of-uses" id="examples-of-uses">Examples Of Uses</a></h2>
+<ul>
+<li>Find all the duplicate strings from a given list of strings</li>
+<li>Find the number of different substrings in a string</li>
+</ul>
+<h2><a class="header" href="#practice-problems-7" id="practice-problems-7">Practice Problems</a></h2>
+<ul>
+<li><a href="https://www.spoj.com/problems/NHAY/">A Needle in the Haystack - SPOJ</a></li>
+<li><a href="https://codeforces.com/problemset/problem/126/B">Password - Codeforces</a></li>
+</ul>
+<h3><a class="header" href="#references-4" id="references-4">References</a></h3>
+<ul>
+<li><a href="https://cp-algorithms.com/">CP-Algorithms</a></li>
+</ul>
+<h1><a class="header" href="#rabin-karp-algorithm" id="rabin-karp-algorithm">Rabin-Karp Algorithm</a></h1>
+<p>This is one of the applications of <em>String hashing</em>.</p>
+<p>Given two strings - a pattern <em>s</em> and a text <em>t</em>, determine if the pattern appears in the text and if it does, enumerate all its occurrences in O(|s|+|t|) time.</p>
+<p><em><strong>Algorithm</strong></em> : First the hash for the pattern <em>s</em> is calculated and then hash of all the substrings of text <em>t</em> of the same length as |s| is calculated. Now comparison between pattern and substring can be done in constant time.</p>
+<h2><a class="header" href="#implementation-3" id="implementation-3">Implementation</a></h2>
+<pre><code class="language-cpp">    vector&lt;int&gt; rabin_karp(string  const&amp; s, string  const&amp; t) 
+    {
+        const  int p = 31; 
+        const  int m = 1e9 + 9;
+        int S = s.size(), T = t.size();
+        vector&lt;long long&gt; p_pow(max(S, T));
+        p_pow[0] = 1; 
+        for (int i = 1; i &lt; (int)p_pow.size(); i++)
+            p_pow[i] = (p_pow[i-1] * p) % m;
+        vector&lt;long long&gt; h(T + 1, 0); 
+        for (int i = 0; i &lt; T; i++) 
+            h[i+1] = (h[i] + (t[i] - 'a' + 1) * p_pow[i]) % m; 
+        long  long h_s = 0; 
+        for (int i = 0;i &lt; S; i++) 
+            h_s = (h_s + (s[i] - 'a' + 1) * p_pow[i]) % m;
+        vector&lt;int&gt; occurences; 
+        for (int i = 0; i + S - 1 &lt; T; i++) 
+        { 
+            long  long cur_h = (h[i+S] + m - h[i]) % m;
+            if (cur_h == h_s * p_pow[i] % m) 
+            occurences.push_back(i); 
+        } 
+        return occurences; 
+    }
+</code></pre>
+<h2><a class="header" href="#problems-for-practice" id="problems-for-practice">Problems for Practice</a></h2>
+<ul>
+<li><a href="https://codeforces.com/problemset/problem/271/D">Good_Substrings</a></li>
+<li><a href="https://www.spoj.com/problems/NAJPF/">Pattern_Find</a></li>
+</ul>
+<h2><a class="header" href="#references-5" id="references-5">References</a></h2>
+<ul>
+<li><a href="https://cp-algorithms.com/">CP-Algorithms</a></li>
+</ul>
+<h1><a class="header" href="#machine-learning-algorithms" id="machine-learning-algorithms">Machine Learning Algorithms</a></h1>
+<p>These are the engines of Machine Learning.</p>
+<hr>
+<h2><a class="header" href="#topics-covered-1" id="topics-covered-1">Topics Covered</a></h2>
+<ul>
+<li><a href="MachineLearningAlgorithms/./Regression/Regression.html">Regression</a>
+<ul>
+<li><a href="MachineLearningAlgorithms/./Regression/LinearRegression/LinearRegression.html">Linear Regression</a></li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#regression" id="regression">Regression</a></h1>
+<p>These are the used to predict a continuous value.</p>
+<hr>
+<h2><a class="header" href="#topics-covered-2" id="topics-covered-2">Topics Covered</a></h2>
+<ul>
+<li><a href="MachineLearningAlgorithms/Regression/./LinearRegression/LinearRegression.html">Linear Regression</a></li>
+</ul>
+<h1><a class="header" href="#linear-regression" id="linear-regression">Linear Regression</a></h1>
+<p>Linear regression is perhaps one among the foremost necessary and wide used regression techniques. It’s among the only regression ways. one among its main blessings is that the simple deciphering results.</p>
+<h2><a class="header" href="#problem-formulation" id="problem-formulation">Problem Formulation</a></h2>
+<p>When implementing regression toward the mean of some variable quantity variable quantity the set of freelance variables 𝐱 = (𝑥₁, …, 𝑥ᵣ), wherever wherever is that the variety of predictors, you assume a linear relationship between 𝑦 and 𝐱: 𝑦 = 𝛽₀ + 𝛽₁𝑥₁ + ⋯ + 𝛽ᵣ𝑥ᵣ + 𝜀. This equation is that the regression of y on x. 𝛽₀, 𝛽₁, …, 𝛽ᵣ area unit the regression coefficients, and 𝜀 is that the random error.</p>
+<p>Linear regression calculates the estimators of the regression coefficients or just the expected weights, denoted with 𝑏₀, 𝑏₁, …, 𝑏ᵣ. They outline the calculable regression operate 𝑓(𝐱) = 𝑏₀ + 𝑏₁𝑥₁ + ⋯ + 𝑏ᵣ𝑥ᵣ. This operate ought to capture the dependencies between the inputs and output sufficiently well.</p>
+<p>The calculable or expected response, 𝑓(𝐱ᵢ), for every for every = one, …, 𝑛, ought to be as shut as potential to the corresponding actual response 𝑦ᵢ. The variations variations - 𝑓(𝐱ᵢ) for all observations 𝑖 = one, …, 𝑛, area unit known as the residuals. Regression is regarding deciding the most effective expected weights, that's the weights adore the littlest residuals.</p>
+<p>To get the most effective weights, you always minimize the add of square residuals (SSR) for all observations 𝑖 = one, …, 𝑛: SSR = Σᵢ(𝑦ᵢ - 𝑓(𝐱ᵢ))². This approach is named the tactic of normal statistical procedure.</p>
+<h2><a class="header" href="#regression-performance" id="regression-performance">Regression Performance</a></h2>
+<p>The variation of actual responses 𝑦ᵢ, 𝑖 = 1, …, 𝑛, happens partially thanks to the dependence on the predictors 𝐱ᵢ. However, there's additionally a further inherent variance of the output.</p>
+<p>The constant of determination, denoted as 𝑅², tells you which of them quantity of variation in 𝑦 will be explained by the dependence on 𝐱 mistreatment the actual regression model. Larger 𝑅² indicates a better fit and means that the model can better explain the variation of the output with different inputs.</p>
+<p>The value 𝑅² = 1 corresponds to SSR = 0, that is to the perfect fit since the values of predicted and actual responses fit completely to each other.</p>
+<h2><a class="header" href="#implementing-linear-regression-in-python" id="implementing-linear-regression-in-python">Implementing Linear Regression in Python</a></h2>
+<p>It’s time to start implementing linear regression in Python. Basically, all you should do is apply the proper packages and their functions and classes.</p>
+<h3><a class="header" href="#python-packages-for-linear-regression" id="python-packages-for-linear-regression">Python Packages for Linear Regression</a></h3>
+<p>The package NumPy is a fundamental Python scientific package that allows many high-performance operations on single- and multi-dimensional arrays. It also offers many mathematical routines. Of course, it’s open source.</p>
+<p>If you’re not familiar with NumPy, you can use the official <a href="https://docs.scipy.org/doc/numpy/user/index.html">NumPy User Guide</a> .</p>
+<p>The package scikit-learn is a widely used Python library for machine learning, built on top of NumPy and some other packages. It provides the means for preprocessing data, reducing dimensionality, implementing regression, classification, clustering, and more. Like NumPy, scikit-learn is also open source.</p>
+<p>You can check the page <a href="https://scikit-learn.org/stable/modules/linear_model.html">Generalized Linear Models</a> on the <a href="https://scikit-learn.org/stable/">scikit-learn web site</a> to learn more about linear models and get deeper insight into how this package works.</p>
+<p>If you want to implement linear regression and need the functionality beyond the scope of scikit-learn, you should consider statsmodels. It’s a powerful Python package for the estimation of statistical models, performing tests, and more. It’s open source as well.</p>
+<p>You can find more information on statsmodels on its <a href="https://www.statsmodels.org/stable/index.html">official web site</a>.</p>
+<h3><a class="header" href="#simple-linear-regression-with-scikit-learn" id="simple-linear-regression-with-scikit-learn">Simple Linear Regression With scikit-learn</a></h3>
+<p>Let’s start with the simplest case, which is simple linear regression.</p>
+<p>There are five basic steps when you’re implementing linear regression:</p>
+<ul>
+<li>Import the packages and classes you need.</li>
+<li>Provide data to work with and eventually do appropriate transformations.</li>
+<li>Create a regression model and fit it with existing data.</li>
+<li>Check the results of model fitting to know whether the model is satisfactory.</li>
+<li>Apply the model for predictions.</li>
+</ul>
+<p>These steps are more or less general for most of the regression approaches and implementations.</p>
+<p><strong>Step 1: Import packages and classes</strong></p>
+<p>The first step is to import the package numpy and the class LinearRegression from sklearn.linear_model:</p>
+<pre><code>import numpy as np
+from sklearn.linear_model import LinearRegression
+</code></pre>
+<p>Now, you have all the functionalities you need to implement linear regression.</p>
+<p>The fundamental data type of NumPy is the array type called numpy.ndarray. The rest of this article uses the term array to refer to instances of the type numpy.ndarray.</p>
+<p>The class sklearn.linear_model.LinearRegression will be used to perform linear and polynomial regression and make predictions accordingly.</p>
+<p><strong>Step 2: Provide data</strong>
+The second step is defining data to work with. The inputs (regressors, 𝑥) and output (predictor, 𝑦) should be arrays (the instances of the class numpy.ndarray) or similar objects. This is the simplest way of providing data for regression:</p>
+<pre><code>x = np.array([5, 15, 25, 35, 45, 55]).reshape((-1, 1))
+y = np.array([5, 20, 14, 32, 22, 38])
+</code></pre>
+<p>Now, you have two arrays: the input x and output y. You should call .reshape() on x because this array is required to be two-dimensional, or to be more precise, to have one column and as many rows as necessary. That’s exactly what the argument (-1, 1) of .reshape() specifies.</p>
+<p>This is how x and y look now:</p>
+<pre><code>&gt;&gt;&gt; print(x)
+[[ 5]
+ [15]
+ [25]
+ [35]
+ [45]
+ [55]]
+&gt;&gt;&gt; print(y)
+[ 5 20 14 32 22 38]
+</code></pre>
+<p>As you can see, x has two dimensions, and x.shape is (6, 1), while y has a single dimension, and y.shape is (6,).</p>
+<p><strong>Step 3: Create a model and fit it</strong>
+The next step is to create a linear regression model and fit it using the existing data.</p>
+<p>Let’s create an instance of the class LinearRegression, which will represent the regression model:</p>
+<pre><code>model = LinearRegression()
+</code></pre>
+<p>This statement creates the variable model as the instance of LinearRegression. You can provide several optional parameters to LinearRegression:</p>
+<ul>
+<li>fit_intercept is a Boolean (True by default) that decides whether to calculate the intercept 𝑏₀ (True) or consider it equal to zero (False).</li>
+<li>normalize is a Boolean (False by default) that decides whether to normalize the input variables (True) or not (False).</li>
+<li>copy_X is a Boolean (True by default) that decides whether to copy (True) or overwrite the input variables (False).</li>
+<li>n_jobs is an integer or None (default) and represents the number of jobs used in parallel computation. None usually means one job and -1 to use all processors.</li>
+</ul>
+<p>This example uses the default values of all parameters.</p>
+<p>It’s time to start using the model. First, you need to call .fit() on model:</p>
+<pre><code>model.fit(x, y)
+</code></pre>
+<p>With .fit(), you calculate the optimal values of the weights 𝑏₀ and 𝑏₁, using the existing input and output (x and y) as the arguments. In other words, .fit() fits the model. It returns self, which is the variable model itself. That’s why you can replace the last two statements with this one:</p>
+<pre><code>model = LinearRegression().fit(x, y)
+</code></pre>
+<p>This statement does the same thing as the previous two. It’s just shorter.</p>
+<p><strong>Step 4: Get results</strong></p>
+<p>Once you have your model fitted, you can get the results to check whether the model works satisfactorily and interpret it.</p>
+<p>You can obtain the coefficient of determination (𝑅²) with .score() called on model:</p>
+<pre><code>&gt;&gt;&gt; r_sq = model.score(x, y)
+&gt;&gt;&gt; print('coefficient of determination:', r_sq)
+coefficient of determination: 0.715875613747954
+</code></pre>
+<p>When you’re applying .score(), the arguments are also the predictor x and regressor y, and the return value is 𝑅².</p>
+<p>The attributes of model are .intercept*, which represents the coefficient, 𝑏₀ and .coef*, which represents 𝑏₁:</p>
+<pre><code>&gt;&gt;&gt; print('intercept:', model.intercept_)
+intercept: 5.633333333333329
+&gt;&gt;&gt; print('slope:', model.coef_)
+slope: [0.54]
+</code></pre>
+<p>The code above illustrates how to get 𝑏₀ and 𝑏₁. You can notice that .intercept* is a scalar, while .coef* is an array.</p>
+<p>The value 𝑏₀ = 5.63 (approximately) illustrates that your model predicts the response 5.63 when 𝑥 is zero. The value 𝑏₁ = 0.54 means that the predicted response rises by 0.54 when 𝑥 is increased by one.</p>
+<p>You should notice that you can provide y as a two-dimensional array as well. In this case, you’ll get a similar result. This is how it might look:</p>
+<pre><code>&gt;&gt;&gt; new_model = LinearRegression().fit(x, y.reshape((-1, 1)))
+&gt;&gt;&gt; print('intercept:', new_model.intercept_)
+intercept: [5.63333333]
+&gt;&gt;&gt; print('slope:', new_model.coef_)
+slope: [[0.54]]
+</code></pre>
+<p>As you can see, this example is very similar to the previous one, but in this case, .intercept* is a one-dimensional array with the single element 𝑏₀, and .coef* is a two-dimensional array with the single element 𝑏₁.</p>
+<p><strong>Step 5: Predict response</strong></p>
+<p>Once there is a satisfactory model, you can use it for predictions with either existing or new data.</p>
+<p>To obtain the predicted response, use .predict():</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.predict(x)
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[ 8.33333333 13.73333333 19.13333333 24.53333333 29.93333333 35.33333333]
+</code></pre>
+<p>When applying .predict(), you pass the regressor as the argument and get the corresponding predicted response.</p>
+<p>This is a nearly identical way to predict the response:</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.intercept_ + model.coef_ * x
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[[ 8.33333333]
+ [13.73333333]
+ [19.13333333]
+ [24.53333333]
+ [29.93333333]
+ [35.33333333]]
+</code></pre>
+<p>In this case, you multiply each element of x with model.coef* and add model.intercept* to the product.</p>
+<p>The output here differs from the previous example only in dimensions. The predicted response is now a two-dimensional array, while in the previous case, it had one dimension.</p>
+<p>If you reduce the number of dimensions of x to one, these two approaches will yield the same result. You can do this by replacing x with x.reshape(-1), x.flatten(), or x.ravel() when multiplying it with model.coef_.</p>
+<p>In practice, regression models are often applied for forecasts. This means that you can use fitted models to calculate the outputs based on some other, new inputs:</p>
+<pre><code>&gt;&gt;&gt; x_new = np.arange(5).reshape((-1, 1))
+&gt;&gt;&gt; print(x_new)
+[[0]
+ [1]
+ [2]
+ [3]
+ [4]]
+&gt;&gt;&gt; y_new = model.predict(x_new)
+&gt;&gt;&gt; print(y_new)
+[5.63333333 6.17333333 6.71333333 7.25333333 7.79333333]
+</code></pre>
+<p>Here .predict() is applied to the new regressor x_new and yields the response y_new. This example conveniently uses arange() from numpy to generate an array with the elements from 0 (inclusive) to 5 (exclusive), that is 0, 1, 2, 3, and 4.</p>
+<p>You can find more information about LinearRegression on the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">official documentation page</a>.</p>
+<h3><a class="header" href="#multiple-linear-regression-with-scikit-learn" id="multiple-linear-regression-with-scikit-learn">Multiple Linear Regression With scikit-learn</a></h3>
+<p>You can implement multiple linear regression following the same steps as you would for simple regression.</p>
+<p><strong>Steps 1 and 2: Import packages and classes, and provide data</strong></p>
+<p>First, you import numpy and sklearn.linear_model.LinearRegression and provide known inputs and output:</p>
+<pre><code>import numpy as np
+from sklearn.linear_model import LinearRegression
+
+x = [[0, 1], [5, 1], [15, 2], [25, 5], [35, 11], [45, 15], [55, 34], [60, 35]]
+y = [4, 5, 20, 14, 32, 22, 38, 43]
+x, y = np.array(x), np.array(y)
+</code></pre>
+<p>That’s a simple way to define the input x and output y. You can print x and y to see how they look now:</p>
+<pre><code>&gt;&gt;&gt; print(x)
+[[ 0  1]
+ [ 5  1]
+ [15  2]
+ [25  5]
+ [35 11]
+ [45 15]
+ [55 34]
+ [60 35]]
+&gt;&gt;&gt; print(y)
+[ 4  5 20 14 32 22 38 43]
+</code></pre>
+<p>In multiple linear regression, x is a two-dimensional array with at least two columns, while y is usually a one-dimensional array. This is a simple example of multiple linear regression, and x has exactly two columns.</p>
+<p><strong>Step 3: Create a model and fit it</strong></p>
+<p>The next step is to create the regression model as an instance of LinearRegression and fit it with .fit():</p>
+<pre><code>model = LinearRegression().fit(x, y)
+</code></pre>
+<p>The result of this statement is the variable model referring to the object of type LinearRegression. It represents the regression model fitted with existing data.</p>
+<p><strong>Step 4: Get results</strong></p>
+<p>You can obtain the properties of the model the same way as in the case of simple linear regression:</p>
+<pre><code>&gt;&gt;&gt; r_sq = model.score(x, y)
+&gt;&gt;&gt; print('coefficient of determination:', r_sq)
+coefficient of determination: 0.8615939258756776
+&gt;&gt;&gt; print('intercept:', model.intercept_)
+intercept: 5.52257927519819
+&gt;&gt;&gt; print('slope:', model.coef_)
+slope: [0.44706965 0.25502548]
+</code></pre>
+<p>You obtain the value of 𝑅² using .score() and the values of the estimators of regression coefficients with .intercept* and .coef*. Again, .intercept* holds the bias 𝑏₀, while now .coef* is an array containing 𝑏₁ and 𝑏₂ respectively.</p>
+<p>In this example, the intercept is approximately 5.52, and this is the value of the predicted response when 𝑥₁ = 𝑥₂ = 0. The increase of 𝑥₁ by 1 yields the rise of the predicted response by 0.45. Similarly, when 𝑥₂ grows by 1, the response rises by 0.26.</p>
+<p><strong>Step 5: Predict response</strong></p>
+<p>Predictions also work the same way as in the case of simple linear regression:</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.predict(x)
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[ 5.77760476  8.012953   12.73867497 17.9744479  23.97529728 29.4660957
+ 38.78227633 41.27265006]
+</code></pre>
+<p>The predicted response is obtained with .predict(), which is very similar to the following:</p>
+<pre><code>&gt;&gt;&gt; y_pred = model.intercept_ + np.sum(model.coef_ * x, axis=1)
+&gt;&gt;&gt; print('predicted response:', y_pred, sep='\n')
+predicted response:
+[ 5.77760476  8.012953   12.73867497 17.9744479  23.97529728 29.4660957
+ 38.78227633 41.27265006]
+</code></pre>
+<p>You can predict the output values by multiplying each column of the input with the appropriate weight, summing the results and adding the intercept to the sum.</p>
+<p>You can apply this model to new data as well:</p>
+<pre><code>&gt;&gt;&gt; x_new = np.arange(10).reshape((-1, 2))
+&gt;&gt;&gt; print(x_new)
+[[0 1]
+ [2 3]
+ [4 5]
+ [6 7]
+ [8 9]]
+&gt;&gt;&gt; y_new = model.predict(x_new)
+&gt;&gt;&gt; print(y_new)
+[ 5.77760476  7.18179502  8.58598528  9.99017554 11.3943658 ]
+</code></pre>
+<p>That’s the prediction using a linear regression model.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

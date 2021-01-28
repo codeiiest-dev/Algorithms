@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lowest Common Ancestor - Algorithms</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../../favicon.png">
+        
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../../Algebra/Algebra.html"><strong aria-hidden="true">2.</strong> Algebra</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Algebra/SieveOfEratosthenes/SieveOfEratosthenes.html"><strong aria-hidden="true">2.1.</strong> Sieve of Eratosthenes</a></li><li class="chapter-item expanded "><a href="../../../Algebra/Fibonacci/Fibonacci.html"><strong aria-hidden="true">2.2.</strong> Fibonacci Sequence</a></li><li class="chapter-item expanded "><a href="../../../Algebra/LinearDiophantine/LinearDiophantine.html"><strong aria-hidden="true">2.3.</strong> Linear Diophantine Equations</a></li><li class="chapter-item expanded "><a href="../../../Algebra/EulerTotient/EulerTotient.html"><strong aria-hidden="true">2.4.</strong> Euler's Totient Function</a></li><li class="chapter-item expanded "><a href="../../../Algebra/ModularInverse/ModularInverse.html"><strong aria-hidden="true">2.5.</strong> Modular Multiplicative Inverse</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.</strong> Searching Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Searching_Algos/Linear_search/Explanation.html"><strong aria-hidden="true">3.1.</strong> Linear Search</a></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Binary_search/Explanation.html"><strong aria-hidden="true">3.2.</strong> Binary Search</a></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Binary_search/binaryVSlinear.html"><strong aria-hidden="true">3.3.</strong> Binary vs Linear Search</a></li><li class="chapter-item expanded "><a href="../../../Searching_Algos/Ternary_search/Explanation.html"><strong aria-hidden="true">3.4.</strong> Ternary Search</a></li></ol></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/index.html"><strong aria-hidden="true">4.</strong> Sorting Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/BubbleSort.html"><strong aria-hidden="true">4.1.</strong> Bubble Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/QuickSort.html"><strong aria-hidden="true">4.2.</strong> Quick Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/CountSort.html"><strong aria-hidden="true">4.3.</strong> Count Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/BucketSort.html"><strong aria-hidden="true">4.4.</strong> Bucket Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/HeapSort.html"><strong aria-hidden="true">4.5.</strong> Heap Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/RadixSort.html"><strong aria-hidden="true">4.6.</strong> Radix Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/InsertionSort/insertion.html"><strong aria-hidden="true">4.7.</strong> Insertion Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/ShellSort.html"><strong aria-hidden="true">4.8.</strong> Shell Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/MergeSort/merge.html"><strong aria-hidden="true">4.9.</strong> Merge Sort</a></li><li class="chapter-item expanded "><a href="../../../SortingAlgorithms/SelectionSort/selection.html"><strong aria-hidden="true">4.10.</strong> Selection Sort</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Backtracking/Backtracking.html"><strong aria-hidden="true">5.</strong> Backtracking</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Backtracking/Pseudocode/Pseudocode.html"><strong aria-hidden="true">5.1.</strong> Pseudocode</a></li><li class="chapter-item expanded "><a href="../../../Backtracking/Problems/Problems.html"><strong aria-hidden="true">5.2.</strong> Problems</a></li></ol></li><li class="chapter-item expanded "><a href="../../../PersistentDS/index.html"><strong aria-hidden="true">6.</strong> Persistent Data Structure</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../PersistentDS/persistentST.html"><strong aria-hidden="true">6.1.</strong> Persistent Segment Trees</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Graph/Graph.html"><strong aria-hidden="true">7.</strong> Graph</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Graph/Tree/Tree.html"><strong aria-hidden="true">7.1.</strong> Tree</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Graph/Tree/Diameter/diameter.html"><strong aria-hidden="true">7.1.1.</strong> Diameter</a></li><li class="chapter-item expanded "><a href="../../../Graph/Tree/Lowest_Common_Ancestor/LCA.html" class="active"><strong aria-hidden="true">7.1.2.</strong> Lowest Common Ancestor</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../String_Processing/String_Processing.html"><strong aria-hidden="true">8.</strong> String Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../String_Processing/String_Hashing/String_Hashing.html"><strong aria-hidden="true">8.1.</strong> String Hashing</a></li><li class="chapter-item expanded "><a href="../../../String_Processing/Rabin-Karp_Algorithm/Rabin-Karp.html"><strong aria-hidden="true">8.2.</strong> Rabin-Karp Algorithm</a></li></ol></li><li class="chapter-item expanded "><a href="../../../MachineLearningAlgorithms/index.html"><strong aria-hidden="true">9.</strong> Machine Learning Algorithms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../MachineLearningAlgorithms/Regression/Regression.html"><strong aria-hidden="true">9.1.</strong> Regression</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../MachineLearningAlgorithms/Regression/LinearRegression/LinearRegression.html"><strong aria-hidden="true">9.1.1.</strong> Linear Regression</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Algorithms</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#lowest-common-ancestor" id="lowest-common-ancestor">Lowest Common Ancestor</a></h1>
+<p>Given a rooted tree \(T\) of \(n\) nodes. The ancestors of a \(node\ u\) are all the nodes in the path from \(node\ u\) to \(root\) (excluding \(u\)).
+Now Let's see how we can find \(LCA\) of two \(node\ u\) and \(v\).
+<br><div align = "center">
+<img height = "175"  src = "https://user-images.githubusercontent.com/58760297/105862267-9aa4bf80-6015-11eb-86b1-3b8f03040904.png"/></p>
+</div><br>
+<h2><a class="header" href="#algorithm-1--on" id="algorithm-1--on">Algorithm \(1\) : \(O(n)\)</a></h2>
+<p>climb up from the deeper \(node\) such that \(depth[u] == depth[v]\). <br>
+Now climb up from both the node until \(u == v\).</p>
+<p><br><div align = "center">
+<img height = "400"  src = "https://user-images.githubusercontent.com/58760297/105890276-2c6ff500-6035-11eb-9c71-56e89742f652.png"/></p>
+</div><br>
+<h3><a class="header" href="#implementation-" id="implementation-">Implementation :</a></h3>
+<pre><code class="language-cpp">int LCA(int u, int v){
+    if(depth[u] &gt; depth[v])
+        swap(u, v);
+    int h = depth[v] - depth[u];
+    for(int i = 0; i &lt; h; i++) // lifting v up to the same level as u
+        v = parent[v];
+    
+    while(u != v){ // climbing up egde by egde from u and v
+        u = parent[u];
+        v = parent[v];
+    }
+    return u;
+}
+</code></pre>
+<p>Here, as we are climbing edge by egde, hence in worst case it will take \(O(n)\) time to compute LCA.</p>
+<h2><a class="header" href="#algorithm-2--ologn" id="algorithm-2--ologn">Algorithm \(2\) : \(O(logn)\)</a></h2>
+<p>Instead of climbing edge by edge, we can make higher jumps from the node : say, from  \(node\ u\) to \(2^i\) distant ancestor of \(u\). We need to precompute \(ancestor[n][k]\) : such that, \(ancestor[i][j]\) will store \(2^j\) distant ancestor of \(node\ i\).</p>
+<p>\(n\) = no. of nodes
+if  \(2^k &gt; n\), then we jump off the tree. Hence \( k = 1 + log_2(n) \)</p>
+<p>We know, \(2^j = 2^{j-1} + 2^{j-1}\) 
+therefore, \(ancestor[i][j] = ancestor[\ ancestor[i][j-1]\ ][j-1]\)
+Note : \(parent[root] = -1\); \(ancestor[i][0]\) is simply the parent of \(node\ i\).</p>
+<pre><code class="language-cpp">// Computing ancestor table
+int k = 1 + log2(n);
+vector&lt;vector&lt;int&gt;&gt; ancestor(n+1, vector&lt;int&gt; (k));
+
+for(int i = 1; i &lt;= n; i++){
+    ancestor[i][0] = parent[i];
+}
+
+for(int i = 1; i &lt;= n; i++){
+    for(int j = 1; j &lt; k; j++){
+        if(ancestor[i][j-1] != -1) // we didn't jump off the tree
+            ancestor[i][j] = ancestor[ ancestor[i][j-1] ][j-1]
+        else
+            ancestor[i][j] = -1
+    }
+}
+</code></pre>
+<h3><a class="header" href="#binary-lifting-" id="binary-lifting-">Binary Lifting :</a></h3>
+<p>Now say, we need to make a jump of height \(h = 45\) from a \(node\ u\).
+\(h = 45 = (101101)_2 = (2^5 + 2^3 + 2^2 + 2^0) jumps\). <br>
+we can implement this jump as following :</p>
+<pre><code class="language-cpp">int jump(int u, int h){
+    for(int i = 0; h &amp;&amp; u != -1;i++){
+        if(h &amp; 1)
+            u = ancestor[u][i];
+        h = h &gt;&gt; 1;
+    }
+    return u;
+}
+</code></pre>
+<h3><a class="header" href="#computing-lca-" id="computing-lca-">Computing LCA :</a></h3>
+<p>Using the \(Binary\ Lifting\) technique, make jump of a \(height = depth[v] - depth[u]\) from the deeper \(node\ v\).</p>
+<p>if \(u == v\) already then \(return\ u\).</p>
+<p>from \(node\ u\) and \(node\ v\), make jump as high as possible such that \(ancestor[u][jump]\ != ancestor[v][jump]\),
+then eventually we will reach a node, \(parent[u] = parent[v] = LCA(u, v)\)</p>
+<p>thus \(return\ parent[u]\).</p>
+<div align = "center">
+<img height = "400"  src = "https://user-images.githubusercontent.com/58760297/105969917-caec6c80-60ae-11eb-8405-4d1f2e83a525.png"/>
+</div>
+<h3><a class="header" href="#implementation--1" id="implementation--1">Implementation :</a></h3>
+<pre><code class="language-cpp">int LCA(int u, int v){
+    if(depth[u] &gt; depth[v])
+        swap(u, v);
+    v = jump(v, depth[v] - depth[u]);
+    if(u == v)
+        return u;
+    
+    int h = 1 + log2(depth[u]);
+    for(int i = h-1; i &gt;= 0; i--){
+        if(ancestor[u][i] != -1 &amp;&amp; ancestor[u][i] != ancestor[v][i]){
+            u = ancestor[u][i];
+            v = ancestor[v][i];
+        }
+    }
+    return parent[u];
+}
+</code></pre>
+<h2><a class="header" href="#problems" id="problems">Problems</a></h2>
+<ul>
+<li><a href="https://cses.fi/problemset/task/1687">Company Querries I</a></li>
+<li><a href="https://cses.fi/problemset/task/1688">Company Querries II</a></li>
+</ul>
+<h2><a class="header" href="#reference" id="reference">Reference</a></h2>
+<ul>
+<li><a href="https://youtu.be/kOfa6t8WnbI">Algorithms Live</a></li>
+<li><a href="https://cp-algorithms.com/graph/lca_binary_lifting.html">cp-algorithms</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../../Graph/Tree/Diameter/diameter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../../String_Processing/String_Processing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../../Graph/Tree/Diameter/diameter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../../String_Processing/String_Processing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
